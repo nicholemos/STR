@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STR - Supremo Tribunal Regreiro</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            /* Tom cinza claro */
+            color: #343a40;
+            /* Tom de texto escuro */
+        }
+
+        .header {
+            background-color: #6c757d;
+            /* Tom cinza escuro */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #e9ecef;
+            /* Tom cinza claro */
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background-color: #6c757d;
+            /* Tom cinza escuro */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .select-container {
+            max-width: 300px;
+            /* Reduzindo a largura do seletor */
+            margin: 0 auto;
+            /* Centralizando o seletor */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>STR</h1>
+        <p>Supremo Tribunal Regreiro</p>
+    </div>
+
+    <!-- Seletor de DB -->
+    <div class="select-container mt-4">
+        <label for="dbSelector" class="form-label">Selecione a DB:</label>
+        <select id="dbSelector" class="form-select">
+            <option value="all">Todos</option>
+            <option value="db206">DB 206</option>
+            <option value="db203">DB 203</option>
+        </select>
+    </div>
+
+    <!-- Conteúdo DB 206 -->
+    <div id="db206" class="container mt-4">
+        <h4>DB 206</h4>
+
+        <p><strong>Salve atormentados! Tenho uma dúvida que será esclarecedora! Algumas magias têm aprimoramentos
+                amplificadores de efeitos; por exemplo, em Curar Ferimentos: “+1 PM: aumenta a cura em +1d8+1. Esses
+                aprimoramentos podem ser usados apenas uma vez? Gratidão pela atenção, longa vida a todos e fiquem com
+                Allihanna!</strong></p>
+        <p><em>Charrua MontainGoat, a druida dahlan</em></p>
+        <p>Saudações ecológicas, druida Charrua! Como consta na página 171 de Tormenta20, aprimoramentos cujo texto
+            começa com a palavra “aumenta” são considerados aprimoramentos cumulativos. Ou seja, você pode gastar aquela
+            quantidade de PM várias vezes para acumular o aumento. Lembre-se sempre que o total de PM gastos na magia
+            não pode ser maior que o seu limite de PM! Se Charrua for uma druida de nível 10, pode gastar 10 PM para
+            curar 11d8+11.</p>
+
+        <hr>
+
+
+        <p><strong>Prezados membros do Supremo Tribunal Regreiro, seria possível fazer flanco com um monstro da magia
+                Conjurar Monstro? Me parece que sim, mas não há nada escrito no livro então achei melhor tomar partido e
+                vir aqui perguntar! Agradeço pelo espaço para consultas, essa é a primeira vez de muitas!</strong></p>
+        <p><em>Cons. Kauê "Elige" L.G.</em></p>
+        <p>Saudações flanqueadas, conselheiro! Pela fria letra da regra, o monstro não é uma criatura e portanto não
+            pode flanquear. Mas se o seu mestre estiver se sentindo muito bonzinho, não custa nada pedir.</p>
+
+        <hr>
+
+
+        <p><strong>Caros ministros do STR, tenho dúvidas sobre a maldição Conhecimento Proibido (Ameaças de Arton,
+                p. 361). Remover a maldição devolve os pontos de atributo perdidos ou o ritual apenas interrompe
+                novas perdas?</strong></p>
+        <p><em>Cons. Bafo Selvagem</em></p>
+        <p>Saudações amaldiçoadas, conselheiro! Remover a maldição também remove a perda.</p>
+
+        <hr>
+
+        <p><strong>Grandiosas entidades regrísticas, ajudem um humilde goblin com suas dúvidas. Caso um mago tente
+                lançar Toque Chocante através de uma criatura invocada por Conjurar Monstro e use o aprimoramento de
+                fazer um ataque corpo a corpo, eliminando a necessidade de testes de resistência, o ataque do
+                monstro e a magia acertam automaticamente?</strong></p>
+        <p><em>Cons. Majinplays</em></p>
+        <p>Saudações regrísticas, conselheiro! A resposta mais direta é que simplesmente não é possível. É a
+            interpretação mais direta das regras. Porém, caso seu mestre esteja num bom dia, talvez permita ao mago
+            fazer um ataque usando suas próprias estatísticas, mas se originando a partir do monstro.</p>
+
+        <hr>
+
+        <p><strong>Excelentíssimos membros do Supremo Tribunal Regreiro! Caso seja utilizada uma magia como Benção,
+                oferecendo +2 em ataque e rolagens de dano, e logo em seguida a magia Controlar Fogo com a opção
+                chamejar, oferecendo +1d6 de dano de fogo, esses bônus de dano se acumulam? Desde já agradeço pela
+                disposição e pelo espaço para consultar vossa sabedoria.</strong></p>
+        <p><em>Leonardo "HalfDemon" Oliveira</em></p>
+        <p>Saudações acumuladas, conselheiro! Sim, os bônus se acumulam. O dano adicional de fogo é um efeito
+            diferente do bônus estático presente na outra magia por dois motivos. Primeiro, um bônus de um tipo
+            específico de dano é diferente de um bônus nas rolagens de dano, que utiliza do mesmo tipo de dano da
+            arma. Se você tem uma arma cruel de gelo eterno, por exemplo, terá +2 pontos de dano de frio e +1 nas
+            rolagens de dano. Além disso, dados extras e bônus estáticos acumulam entre si. Se você tem +1d6 nas
+            rolagens de dano e +2 nas rolagens de dano, eles se tornam +1d6+2 nas rolagens de dano.</p>
+
+        <hr>
+
+        <p><strong>Olá, galera do STR! Os poderes concedidos que convocam capangas, como Servos do Dragão e Tropa
+                Duyshidakk, podem ser usados por um personagem amordaçado ou exigem comandos verbais? Saudações a
+                todos que estiverem lendo minha pergunta! Espero que ela ajude outros jogadores!</strong></p>
+        <p><em>Cons. Bale</em></p>
+        <p>Saudações invocadas, conselheiro! As regras não abordam essa questão diretamente. Dessa forma, na falta
+            de uma proibição, seria permitido ao personagem amordaçado. Porém, esse é exatamente o tipo de
+            arbitragem que cabe ao mestre durante a mesa. A decisão final cabe a ele.</p>
+
+        <hr>
+
+        <p><strong>Tenho dúvidas sobre a distinção Mago de Batalha e seu poder Arsenal Arcano. Quaisquer bônus em
+                rolagens de dano fornecidos pela arma são somados ao bônus de dano de seu poder Arcano de Batalha.
+                Isso se aplica para o encanto venenoso? O dano base da arma conta como um bônus?</strong></p>
+        <p><em>Cons. RobotS64</em></p>
+        <p>Saudações arcanas, conselheiro! Arsenal Arcano aumenta o bônus de dano do poder Arcano de Batalha,
+            aplicando a ele bônus advindos da arma. O encanto venenoso não concede um bônus de dano e o dano base da
+            arma também não. Porém, uma arma elétrica adicionaria um bônus de +1d6 pontos de dano de eletricidade,
+            por exemplo.</p>
+
+        <hr>
+
+        <p><strong>Usar uma poção ou pergaminho conta como lançar uma magia para fins de contramágica?</strong></p>
+        <p><em>Gilson Burato</em></p>
+        <p>Saudações azuladas, conselheiro! Usar uma poção não é lançar uma magia. Usar um pergaminho, por sua vez,
+            é.</p>
+
+        <hr>
+
+
+        <p><strong>Grandíssimos mestres regreiros, trago a vós minha humilde questão. O que acontece com uma área
+                profanada por um lich quando um clérigo usa Consagrar? O clérigo precisa fazer algum teste contra a
+                CD do lich? A área profanada desaparece e a área consagrada a substitui?</strong></p>
+        <p><em>Cons. Vieira</em></p>
+        <p>Saudações regreiras, conselheiro! Não há teste; os efeitos de ambas as magias persistem. A questão sobre
+            elas se anularem diz respeito apenas a contramágica.</p>
+
+        <hr>
+
+
+        <p><strong>Excelências, meu grupo de aventureiros tem uma dúvida. O bônus da magia Arma Mágica é concedido
+                apenas para as armas do arcanista ou ele pode utilizar essa magia para arma de um aliado?</strong>
+        </p>
+        <p><em>Cons. Djow</em></p>
+        <p>Saudações comunais, conselheiro! A magia pode ser lançada na arma do arcanista ou na arma de um aliado.
+        </p>
+
+        <hr>
+
+        <p><strong>Saudações e bom Azgher a todos os excelentíssimos representantes da justiça! A respeito da
+                condição cego, seria a escuridão um impeditivo para o uso de magias, tal qual a condição surdo? Uma
+                criatura com tal condição seria capaz de perceber inimigos para usar como alvo de suas habilidades?
+                Ou as terríveis penalidades se limitam às descritas na condição? Que Azgher ilumine suas
+                respostas.</strong></p>
+        <p><em>Cons. V!Guedes</em></p>
+        <p>Saudações radiantes, conselheiro! A condição cego, por si só, não configura condição ruim para lançar
+            magias, de forma diferente do que acontece com a condição surdo. Quanto a perceber inimigos, isso
+            depende dos outros sentidos do conjurador em questão. Caso só pudesse contar com a visão, então de fato
+            isso não seria possível. Há sugestões sobre como lidar com essas questões na página 225 de Tormenta20.
+        </p>
+
+        <hr>
+
+        <p><strong>Marca da distinção é uma habilidade grátis ou ocupa o espaço de um poder?</strong></p>
+        <p><em>Cons. Railson Almeida</em></p>
+        <p>Saudações distintas, conselheiro! Marca de distinção pode ser qualquer coisa, menos grátis — o personagem
+            precisa ralar, em jogo, para cumprir a admissão e adquiri-la! O personagem não precisa, porém, gastar um
+            poder para tanto.</p>
+
+        <hr>
+
+        <p><strong>Saudações excelentíssimos, gostaria de elucidar uma dúvida que surgiu nas minhas jogatinas de dados.
+                O ataque acrobático do bucaneiro menciona uma pirueta, mas não há essa descrição na perícia Acrobacia.
+                Como posso proceder para conseguir realizá-la?</strong></p>
+        <p><em>Cons. Luizito007</em></p>
+        <p>Saudações acrobáticas, conselheiro! Qualquer teste de Atletismo ou Acrobacia realizado para se mover se
+            aplica. No caso específico da Acrobacia, você pode usar a perícia para atravessar um espaço ocupado por um
+            inimigo. A critério do mestre, você poderia acrescentar uma cambalhota ou pirueta a uma ação de movimento
+            normal com um teste de Acrobacia CD 15 — mas se falhar fica caído!</p>
+
+        </p>
+
+        <hr>
+
+        <p><em>Cons. Matheus Cezar</em></p>
+        <p><strong>Saudações, queridos lordes da sapiência e das regras! Venho aqui tirar uma dúvida que vem assombrando
+                as mesas em que jogo. É como meu mestre disse: RPG não tem sentido e sim regras. Se eu fizer multiclasse
+                de druida com outra classe conjuradora e pegar o poder Magia Natural, as magias da outra classe
+                conjuradora podem ser usadas?</strong></p>
+        <p>Saudações selvagens, conselheiro! Magia Natural se aplica a quaisquer magias, não sendo limitada às magias de
+            druida.</p>
+
+        <hr>
+
+        <p><em>Cons. Giovanni Ernesto</em></p>
+        <p><strong>Meus cumprimentos aos excelentíssimos membros desse tribunal, venho aqui para trazer uma dúvida do
+                meu grupo. O item Bainha Mágica permite que o personagem lance a magia Arma Mágica. Por sua vez, a magia
+                permite que o conjurador faça testes de ataque utilizando seu atributo chave. Esse atributo chave já é
+                definido ou fica à escolha do jogador?</strong></p>
+        <p>Saudações embainhadas, conselheiro! Como essa questão não é determinada especificamente pelas regras, a
+            decisão cabe ao mestre. Sugerimos usar a mesma base das CDs de poções e pergaminhos: o atributo é escolhido
+            pelo jogador, entre Inteligência, Sabedoria e Carisma.</p>
+
+    </div>
+
+    <!-- Conteúdo DB 203 -->
+    <div id="db203" class="container mt-4">
+        <h4>DB 203</h4>
+
+        <p><strong>Saudações, digníssimos legisladores da arte RPGística!</strong></p>
+
+        <p><strong>1) Indo direto ao ponto: no último STR foi dito que as habilidades Marca da Presa (do caçador) e
+                Duelo (do cavaleiro) não afetam bandos pois os mesmos são imunes a efeitos que afetam apenas uma
+                criatura e não causam dano, entretanto, ambas as habilidades causam dano. Entendo que seja meio difícil
+                imaginar a aplicação de Duelo nessa situação, mas imaginar um caçador usando Marca da Presa para
+                analisar um grupo e com isso causar mais dano ao grupo, seja desorientando o bando ou atacando
+                indivíduos chave, é algo muito plausível. Poderiam, então, explicar a razão de, mesmo sendo habilidades
+                que causam dano, bandos terem imunidade a elas?</strong></p>
+        <p><strong>2) Quanto ao encanto conjuradora e a opção conjurador do Golpe Pessoal, poder de guerreiro, o "ponto
+                atingido pelo ataque" precisa ser, necessariamente, uma criatura? Eu poderia "atacar" o solo ou até o ar
+                para lançar/descarregar uma magia de área naquele ponto?</strong></p>
+        <p><strong>3) O quão difícil é conseguir pergaminhos? São itens mágicos facilmente encontrados para compra, tal
+                como poções, encontrados apenas em cidades maiores ou encontrados apenas em leilões de grandes
+                metrópoles, como Valkaria e Vectora?</strong></p>
+        <p><strong>4) Um personagem treinado em Misticismo pode lançar magias através de pergaminhos ou precisa ser
+                capaz de lançar magias?</strong></p>
+        <p><strong>— Cons. Gilmar Burato</strong></p>
+        <p>Saudações, conselheiro! Vamos às suas respostas.</p>
+        <p>1) Quando mencionamos efeitos que causem dano, queremos dizer efeitos que causem dano direto. Essas
+            habilidades não causam dano direto; elas concedem bônus a outros efeitos que causem dano. Uma Bola de Fogo
+            causa dano direto. Marca da Presa não. Indo além da regra, imagine que o caçador, ao usar Marca da Presa,
+            vai analisar apenas uma das várias criaturas que compõe o bando, e não todo o grupo de criaturas. Compare o
+            texto de bando com o texto de Magia Sagrada, por exemplo, um caso já abordado no FAQ. Caso deseje permitir o
+            uso dessas habilidades em bandos nas suas mesas, porém, sinta-se à vontade!</p>
+        <p>2) O ponto atingido precisa ser um alvo válido para um ataque. O solo ou as paredes servem; um ponto no ar,
+            não.</p>
+        <p>3) Pergaminhos são tão comuns quanto poções. Para ter uma ideia de sua "raridade", compare o preço de cada
+            pergaminho com os limites de preços de bens em cada tipo de comunidade (Tormenta20, p. 271).</p>
+        <p>4) Você pode lançar magias com pergaminhos fazendo um teste de Misticismo (possível apenas caso seja treinado
+            na perícia) ou conhecendo a magia escrita no pergaminho. Para aplicar aprimoramentos, porém, você deve
+            conhecer a magia.</p>
+
+        <p><strong>Ao santo tribunal regrista, meus desejos de boas marteladas em vossa tribuna! Eis minha questão: todo
+                o dano de armas encantadas é considerado dano mágico? Estou mestrando uma campanha em que os KPCs
+                (Killable Persona Characters), de posse de armas mágicas, vão enfrentar um alzeras. A criatura é
+                incorpórea, ou seja, só pode ser atingido por armas de prata ou armas mágicas. Pode ainda lançar Amarras
+                Etéreas, cujos laços são imunes a dano mágico. O dano de uma arma encantada sempre vai atingir o
+                alzeras, mas nunca seus laços?</strong></p>
+        <p><strong>— Cons. Icaro Almeida</strong></p>
+        <p>Saudações necromânticas, conselheiro! Exatamente, uma arma mágica pode ferir o alzeras, mas não pode quebrar
+            as Amarras Etéreas.</p>
+
+        <p><strong>Saudações, servos de Khalmyr! Coloco perante vocês duas dúvidas recorrentes, pertinentes a
+                personagens futuros.</strong></p>
+        <p><strong>1) Um nobre devoto de Kallyadranoch usa Aura de Medo, deixa uma criatura abalada pela cena e então
+                usa a perícia Intimidação para assustar a mesma criatura. Por já estar abalada e ficar abalada
+                novamente, por uma fonte diferente, a criatura fica apavorada pela cena?</strong></p>
+        <p><strong>2) É certo afirmar que, sempre que uma criatura falhar em um teste de Percepção contra a Furtividade
+                de alguém, ela é considerada desprevenida para o mesmo (além de receber camuflagem total)?</strong></p>
+        <p><strong>— Cons. Fernando Schwenson</strong></p>
+        <p>Saudações furtivas e aterrorizantes, conselheiro! Vamos às suas respostas.</p>
+        <p>1) Sim, a criatura fica apavorada pela cena.</p>
+        <p>2) Sim, está correto.</p>
+
+        <p><strong>Saudações! Trago dúvidas de 3DeT Victory!</strong></p>
+        <p><strong>1) Na página 121, afirma-se que "fazer um ataque, usar uma técnica ou magia são ações". Mais abaixo,
+                afirma que "vantagem que gasta PM não é uma ação, exceto quando parte de um ataque". Apesar de estranho,
+                isso significa que é possível fazer um ataque e ainda usar as vantagens dentro das condições
+                acima?</strong></p>
+        <p><strong>2) Qual é o benefício por escolher Imortal em vez de regeneração, em termos de regras?</strong></p>
+        <p><strong>3) Um personagem com as vantagens Ágil (H+2), Forte (P+2) e Ataque Especial Preciso (ataca usando H)
+                e Potente (P+2) faz um ataque com qual valor?</strong></p>
+        <p><strong>4) Um personagem com Ágil (H+2), Vigoroso (R+2), Defesa Tenaz (R+2) e Defesa Especial (Esquiva) soma
+                quanto na rolagem?</strong></p>
+        <p><strong>5) Um personagem pode usar a vantagem Defesa Especial (Reflexão) para refletir ataques em combates
+                dentro de uma arca, torneios de xadrez, conflitos de culinária, batalhas de robôs e um desafio de
+                sobrevivência? Poderiam dar ao menos 2 exemplos em contextos diferentes?</strong></p>
+        <p><strong>6) Pergunta protocolar: quem possui a vantagem Transformação recebe todo o XP em cada ficha ou tem
+                que dividir? Estamos ansiosos por respostas.</strong></p>
+        <p><strong>— Cons. Gil Farias</strong></p>
+        <p>Saudações tijolísticas, conselheiro! Vamos às suas respostas.</p>
+        <p>1) Sim. O que tem de estranho nisso?</p>
+        <p>2) Sempre que um efeito mata um personagem Imortal, ele volta. Pode até demorar, mas volta. Regeneração afeta
+            apenas testes de morte — se alguma coisa matar você sem passar pelo teste, sinto muito!</p>
+        <p>3 e 4) H+4 em ambas. Como diz no quadro "mais ágil que uma tartaruga", essas vantagens Forte/Ágil/etc. são
+            exceções à descrição dos Ataques/Defesas Especiais que trocam o atributo. Então o Ataque Especial Preciso
+            não recebe o bônus de Forte, mas recebe o de Ágil. O mesmo para Defesa Especial Esquiva.</p>
+        <p>5) Sim, a vantagem é utilizável em qualquer contexto. Encontrar uma boa explicação para como sua Defesa
+            Especial (Reflexão) faz diferença em uma partida de xadrez é dever do jogador, não desse tribunal!</p>
+        <p>6) Não precisa dividir.</p>
+
+        <p><strong>Saudações!</strong></p>
+        <p><strong>1) Uma clériga de Lena poderia usar Infligir Ferimentos em um jogador osteon para curar sem que
+                quebre suas obrigações e restrições?</strong></p>
+        <p><strong>2) Um druida na forma selvagem, com o poder Magia Natural, pode usar catalisadores carregados pelo
+                personagem? E se estiver utilizando a bandoleira de poções?</strong></p>
+        <p><strong>— Cons. Bruno Emerson</strong></p>
+        <p>Saudações selvagens, conselheiro! Vamos às suas respostas:</p>
+        <p>1) Sim, sem problema.</p>
+        <p>2) Quando um druida assume uma forma selvagem seus itens se fundem ao seu corpo. Entretanto, o poder Magia
+            Natural permite, entre outras coisas, que ele empunhe catalisadores. Aqui, "empunhar" tem o sentido de sacar
+            e usar esses itens (o texto poderia dizer "você pode sacar e empunhar catalisadores", mas se optou por uma
+            redação mais simples). A descrição exata de como os itens são "sacados" depende do jogador: eles podem se
+            materializar na sua "pata", ou podem brotar de sua pele em meio a sangue e pelos ou qualquer outro efeito
+            que faça sentido ao personagem.</p>
+
+        <p><strong>Mestre desesperado implorando audiência ao STR:</strong></p>
+        <p><strong>1) A respeito da magia Relâmpago Flamejante de Reynard, após usar um turno carregando, nos próximos
+                turnos eu posso gastar uma ação de movimento para lançar uma Bola de Fogo ou um Relâmpago? Já que posso
+                transformar uma ação padrão em uma ação de movimento, posso lançar uma Bola de Fogo e um Relâmpago no
+                mesmo turno? Lançar essas Bolas de Fogo e Relâmpagos é equivalente a lançar uma magia para critérios de
+                efeitos como Velocidade?</strong></p>
+        <p><strong>2) A magia Controlar o Tempo desacelera o tempo para o conjurador ou para quem está fora da bolha?
+                Caso desacelere para o conjurador, é possível se aproveitar disso para lançar Relâmpago Flamejante mais
+                rapidamente?</strong></p>
+        <p><strong>— Cons. Luiz Roberto Dias</strong></p>
+        <p>Saudações ardentes e pontuais, conselheiro! Vamos às suas respostas.</p>
+        <p>1) Para lançar Relâmpago Flamejante de Reynard, são necessárias duas rodadas completas. Na rodada um, o
+            arcanista usa uma ação de movimento e uma ação padrão para começar a magia; ele fica desprevenido até a
+            rodada seguinte. Na rodada dois, o arcanista usa uma ação de movimento e uma ação padrão para completar a
+            magia. Se ainda tiver ações depois disso, já pode usufruir de seus benefícios. Caso não tenha, só poderá
+            disparar bolas de fogo e/ou relâmpagos na rodada três. É possível disparar tantos quanto houver ações
+            disponíveis — na ausência de qualquer outra habilidade e direcionando todas as suas ações naturais para esse
+            fim, um arcanista pode disparar uma bola de fogo ou relâmpago com sua ação padrão e outro com sua ação de
+            movimento. Ações padrão ou de movimento obtidas a partir de Velocidade podem ser usadas livremente para
+            disparar essas bolas de fogo ou relâmpagos; esses efeitos individuais não são magias e não estão sendo
+            lançados. Repare que o texto da magia usa o termo disparar em vez de lançar e não descreve Bola de Fogo e
+            Relâmpago, mas sim bola de fogo e relâmpago.</p>
+        <p>2) Controlar o Tempo desacelera o tempo para o conjurador, efetivamente concedendo turnos adicionais. Esses
+            turnos podem ser usados para cumprir o tempo de execução de Relâmpago Flamejante de Reynard.</p>
+
+        <p><strong>Como um estudioso da alta arcana e usurpador divino de Tanna-Toh, minha dúvida é sobre o
+                aprimoramento da magia Roubar A Alma que permite lançar a magia Possessão como reação, mesmo sem
+                conhecê-la. É possível usar o aprimoramento de duração permanente de Possessão ou apenas sua versão
+                básica?</strong></p>
+        <p><strong>— Cons. Railson Santos</strong></p>
+        <p>Saudações reincidentes, conselheiro! Nesse caso, a magia Possessão sequer é lançada (não poderia, por
+            exemplo, ser alvo de uma contramágica). A magia apenas recebe um efeito adicional, idêntico ao efeito base
+            da magia Possessão. Dessa forma, nenhum de seus aprimoramentos está incluso.</p>
+    </div>
+
+
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>Este conteúdo é um material gratuito não-oficial, feito por fãs, sem orientação ou aprovação da Jambo
+            Editora
+        </p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('dbSelector').addEventListener('change', function () {
+            var selectedDB = this.value;
+            if (selectedDB === 'all') {
+                document.getElementById('db206').style.display = 'block';
+                document.getElementById('db203').style.display = 'block';
+            } else {
+                document.getElementById('db206').style.display = 'none';
+                document.getElementById('db203').style.display = 'none';
+                document.getElementById(selectedDB).style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>
