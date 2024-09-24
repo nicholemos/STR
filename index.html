@@ -920,11 +920,19 @@
         document.getElementById('dbSelector').addEventListener('change', function () {
             var selectedDB = this.value;
             if (selectedDB === 'all') {
+                document.getElementById('db207').style.display = 'block';
                 document.getElementById('db206').style.display = 'block';
                 document.getElementById('db203').style.display = 'block';
+                document.getElementById('db200').style.display = 'block';
+                document.getElementById('db179').style.display = 'block';
+                document.getElementById('db178').style.display = 'block';
             } else {
+                document.getElementById('db207').style.display = 'none';
                 document.getElementById('db206').style.display = 'none';
                 document.getElementById('db203').style.display = 'none';
+                document.getElementById('db200').style.display = 'none';
+                document.getElementById('db179').style.display = 'none';
+                document.getElementById('db178').style.display = 'none';
                 document.getElementById(selectedDB).style.display = 'block';
             }
         });
