@@ -57,27 +57,44 @@
         <p>Supremo Tribunal Regreiro</p>
     </div>
 
-    <!-- Seletor de DB -->
-    <!-- Seletor de DB e Campo de Busca lado a lado -->
+    <!-- Botão checkbox -->
+    <div class="d-flex justify-content-center mt-4">
+        <label>
+            <input type="checkbox" id="check"> Ocultar conteúdo pré Jogo do Ano
+        </label>
+    </div>
+
+
+    <!-- Seletor de DB e Campo de Busca  -->
     <div class="row mt-4">
-        <div class="col-md-6">
-            <label for="dbSelector" class="form-label">Selecione a DB:</label>
-            <select id="dbSelector" class="form-select">
-                <option value="all">Todos</option>
-                <option value="db207">DB 207</option>
-                <option value="db206">DB 206</option>
-                <option value="db203">DB 203</option>
-                <option value="db200">DB 200</option>
-                <option value="db179">DB 179</option>
-                <option value="db178">DB 178</option>
-            </select>
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div>
+                <label for="dbSelector" class="form-label">Selecione a DB:</label>
+                <select id="dbSelector" class="form-select w-100">
+                    <option value="all">Todos</option>
+                    <option value="db207">DB 207</option>
+                    <option value="db206">DB 206</option>
+                    <option value="db205">DB 205</option>
+                    <option value="db203">DB 203</option>
+                    <option value="db200">DB 200</option>
+                    <option value="db179">DB 179</option>
+                    <option value="db178">DB 178</option>
+                </select>
+            </div>
         </div>
 
-        <div class="col-md-6">
-            <label for="searchInput" class="form-label">Buscar por palavra:</label>
-            <input type="text" id="searchInput" class="form-control" placeholder="Digite uma palavra para buscar...">
+        <!-- Campo de busca centralizado -->
+        <div class="col-md-6 d-flex justify-content-right align-items-right">
+            <div>
+                <label for="searchInput" class="form-label">Buscar por palavra:</label>
+                <input type="text" id="searchInput" class="form-control w-100"
+                    placeholder="Digite uma palavra para buscar...">
+            </div>
+
         </div>
     </div>
+
+
 
 
     <!-- Conteúdo DB 207 -->
@@ -450,6 +467,164 @@
         </div>
     </div>
 
+    <!-- Conteúdo DB 205 -->
+    <div id="db205" class="container mt-4">
+        <h4>DB 205</h4>
+
+        <div class="searchable">
+            <p><strong>Excelentíssimos! Gostariam de esclarecimentos sobre o poder Supernova, da classe Místico,
+                    introduzido na DB 199. Pelo que entendi, esse poder permite a um Místico com Afinidade (fogo)
+                    adicionar 1d12 de dano para cada 5 PVs gastos em qualquer magia que cause dano de fogo SEM QUALQUER
+                    LIMITE exceto o seu PV corrente? Seja uma magia de efeito instantâneo como uma Bola de Fogo, ou sua
+                    variante que é a esfera flamejante que dura a cena toda?</strong></p>
+            <p><em>Cons. Yuri Pugliesi</em></p>
+            <p>Saudações pirocinéticas, conselheiro! Sim, a versão apresentada na DB 199 funciona exatamente dessa
+                forma, para critério de testes. A versão final incluirá outras limitações, como 5 pontos de vida
+                sacrificados por círculo de magia e limitação a efeitos instantâneos.</p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Com certeza é uma pergunta bem estranha, mas quais são os limites do Dom da Ressurreição? Um dos
+                    meus jogadores quer ressuscitar uma carne de hambúrguer "recém-feita" para testar este poder, mas da
+                    forma como interpretei a descrição, creio que ela não reconstruiria totalmente o corpo do
+                    animal.</strong>
+            </p>
+            <p><em>Cons. Vinicius Costa</em></p>
+            <p>Saudações proféticas, conselheiro! O Dom da Ressurreição precisa de um corpo morto há menos de um ano
+                para funcionar. Se uma massa de carne moída ainda constitui um corpo vai depender da interpretação do
+                mestre. Porém, vale lembrar que “testar” os milagres dos deuses de forma mundana é extremamente
+                desrespeitoso, podendo resultar em sanções por parte da igreja ou da divindade.</p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Excelentíssimo tribunal e membros do júri, trago duas dúvidas:<br>
+                    1) O poder Corpo Aberrante altera o dano causado por um druida em sua forma selvagem?<br>
+                    2) Em Ameaças de Arton, alguns chassis citam deslocamento de seis metros, enquanto outros (como o
+                    mashin) não citam seu deslocamento. Qual é o deslocamento desses chassis?</strong></p>
+            <p><em>Cons. Jamerson</em></p>
+            <p>Saudações corrompidas, conselheiro! Vamos às suas respostas.<br>
+                1) O poder Corpo Aberrante não afeta armas naturais, seja de um druida em forma selvagem ou qualquer
+                outra. Lembre-se de que, como citado no FAQ, um druida em forma selvagem não pode usar ataques
+                desarmados.<br>
+                2) Como consta da página 169 de Tormenta20, o deslocamento padrão é de nove metros. Apenas as exceções
+                são listadas. Um mashin, portanto, tem deslocamento 9m.</p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Excelentíssimos ministros, trago uma questão perante vossas senhorias.<br>
+                    Em Ordem Paranormal, um personagem Mundano perde a habilidade Empenho, ao se tornar uma das classes
+                    padrão (Combatente, Especialista ou Ocultista)?</strong></p>
+            <p><em>Cons. Warlordthiago</em></p>
+            <p>Saudações paranormais, conselheiro! O personagem mantém a habilidade. Não deixe de conferir as novas
+                opções do Sobrevivente, no suplemento <a
+                    href="https://jamboeditora.com.br/produto/ordem-paranormal-rpg-sobrevivendo-ao-horror/"
+                    target="_blank">Sobrevivendo Ao Horror!</a></p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Saudações caros estudiosos do mundo das regras. Possuo uma dúvida sobre imunidades.<br>
+                    1) Se uma criatura imune a frio é atingida pela magia Dardo Gélido, que causa dano de frio e a
+                    condição lento, ela ignora o dano de frio (por ser imune à frio) mas fica lenta (por não ser imune à
+                    condição de movimento)? Como acontece em outros casos similares?</strong></p>
+            <p><em>Cons. Fernando Henrique</em></p>
+            <p>Saudações gélidas, conselheiro! A resposta depende do contexto. Como consta da página 229 de Tormenta20,
+                uma criatura imune “não sofre nenhuma consequência direta daquilo contra a qual ela é imune”. No caso, a
+                lentidão do Dardo Gélido acontece como consequência do dano por frio — ou seja, a criatura não fica
+                lenta. É diferente de quando uma criatura imune a efeitos mágicos precisa atravessar uma área de terreno
+                difícil criado por magia; como o terreno difícil é consequência indireta, a criatura não é imune ao
+                mesmo.</p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Olá, tudo bem?<br>
+                    1) Segundo o FAQ, o poder Arcano de Batalha, da classe arcanista, pode ser utilizado com magias de
+                    outras classes, utilizando o atributo-chave dessa classe. Isso de fato pode ser feito? Podemos
+                    concluir que outros poderes de classe possam ser utilizados por outras classes, desde que
+                    compatíveis?<br>
+                    2) O poder Magia Discreta permite que o conjurador se beneficie de algum item, como esotérico? Se
+                    sim, como ele não precisa gesticular, o conjurador poderia se beneficiar de dois itens
+                    esotéricos?<br>
+                    3) Um conjurador com os poderes Magia Discreta e Magia Acelerada, sob efeito da magia
+                    <em>Marionete</em>,
+                    pode lançar uma magia como ação livre pagando os PM necessários? Se sim, ele deve fazer um teste de
+                    concentração? O mesmo acontece com a magia <em>Legião</em>?</strong></p>
+            <p><em>Cons. Bruno Thomé Borgui</em></p>
+            <p>Tudo bom, conselheiro! Vamos às suas respostas.<br>
+                1) Sim, Arcano de Batalha e outros poderes podem ser utilizados com habilidades de outras classes, desde
+                que compatíveis. Por exemplo, um clérigo poderia usar Prece de Batalha com uma magia divina obtida pelo
+                poder de qareen Tatuagem Mística.<br>
+                2) O conjurador pode usar um item esotérico mesmo quando usa Magia Discreta. Como consta da página 159
+                de Tormenta20, uma magia só pode receber os benefícios de um esotérico por vez.<br>
+                3) Marionete impede apenas ações físicas, explicitamente permitindo ações dependentes exclusivamente de
+                concentração. A resposta final cabe ao mestre, mas é plausível que um conjurador com esses poderes possa
+                lançar magias enquanto está sob efeito de Marionete. Legião não tem essa cláusula sobre ações físicas,
+                porém, não permitindo esse tipo de ação à revelia do controlador.</p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Excelências, qual é a distância máxima que o monstro da magia Conjurar Monstro pode se afastar do
+                    conjurador? Caso possa se distanciar livremente, o que acontece caso o conjurador perca contato
+                    visual e/ ou auditivo?</strong></p>
+            <p><em>Cons. Carlos Matheus</em></p>
+            <p>Saudações monstruosas, conselheiro!<br>
+                Não há um limite pré-definido para a distância que o monstro pode se afastar do conjurador nem
+                necessidade de contato visual para que o conjurador dê ordens. Porém, lembre-se de que a magia é
+                sustentada, o conjurador não tem acesso à percepção visual do monstro e o monstro não age sozinho!
+            </p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Saudações, graciosos ministros. Estou muito feliz por poder enviar a minha primeira pergunta ao
+                    STR. Sobre Ordem Paranormal, eu gostaria de saber:<br>
+                    1) O bônus de ataque do ritual Arma Atroz acumula com bônus de itens como a modificação
+                    Certeira?<br>
+                    2) Usando a trilha Lâmina Paranormal para atacar com Ocultismo e usando uma vestimenta aprimorada de
+                    Ocultismo eu ganho +5 no teste de ataque? Eu poderia acumular esse bônus de ataque com outros bônus
+                    de itens, como a modificação certeira?<br>
+                    Desde já agradeço a paciência para com minhas dúvidas.</strong></p>
+            <p><em>Cons. Reis</em></p>
+            <p>Saudações, gracioso conselheiro! Também estamos muito felizes por poder responder suas primeiras
+                perguntas.<br>
+                1) Sim. Conforme o texto da página 312, bônus acumulam desde que venham de fontes diferentes. As fontes
+                são habilidades, itens, rituais e aliados.<br>
+                2) Lembrando que as vestimentas devem ser aprovadas pelo mestre, sim. A vestimenta aprimorada concede +5
+                em Ocultismo, um benefício diferente do bônus em testes de ataque oferecido pela modificação certeira.
+                Porém, em casos similares, algumas comunidades de mestres preferem proibir esse acúmulo, para evitar
+                abusos. A decisão final, como sempre, fica a cargo do mestre.
+            </p>
+            <hr>
+        </div>
+
+        <div class="searchable">
+            <p><strong>Prezados juízes, tenho sofrido com uma cria de Aharadak e preciso de vosso auxílio. Caso um
+                    personagem com Asas Insetoides (Tormenta20, p. 136):<br>
+                    1) Termine seu turno voando, ele continua no ar até o seu próximo turno, despenca ou pousa?<br>
+                    2) Se ele despencar sobre alguém, o dano que o alvo recebe é o mesmo que o dele?<br>
+                    3) Qual a mecânica indicada para o caso dele se deixar cair ou usar uma ação livre para deixar cair
+                    um objeto pesado sobre um alvo, a de queda (p. 319) ou a de armas improvisadas (Tormenta20, p.
+                    147)?</strong></p>
+            <p><em>Cons. Kaezzar</em></p>
+            <p>Saudações voadoras, conselheiro! Vamos às suas respostas:<br>
+                1) Asas Insetoides representa uma forma limitada de voo (quase um "voo de galinha"), por isso ele só
+                dura até o fim do turno. Se não tiver aterrizado quando seu turno termina, o personagem cai.<br>
+                2) Sim. Mas observe que, para a criatura sob a qual ele despenca, o dano não é automático (veja
+                abaixo).<br>
+                3) Se deixar cair sobre alguém pode ser considerado um ataque desarmado (ou mesmo uma investida). Deixar
+                um objeto cair é um ataque com uma arma improvisada. Entretanto, em ambos os casos o mestre pode
+                conceder o bônus por atacar em posição elevada.
+            </p>
+            <hr>
+        </div>
+
+    </div>
+
     <!-- Conteúdo DB 203 -->
     <div id="db203" class="container mt-4">
         <h4>DB 203</h4>
@@ -648,562 +823,565 @@
         </div>
     </div>
 
-    <!-- Conteúdo DB 179 -->
-    <div id="db179" class="container mt-4">
+    <!-- Conteúdo Pré Jogo do Ano -->
+    <div id="palavra-marcada">
+        <!-- Conteúdo DB 179 -->
+        <div id="db179" class="container mt-4">
 
-        <h4>DB 179</h4>
+            <h4>DB 179</h4>
 
-        <div class="searchable">
-            <strong>Vira-casaca</strong><br>
-            <strong>
-                Posso usar diplomacia com meus monstros para fazer um dos jogadores mudarem de lado?
-            </strong><br>
-            <em>— Cons. Railson Almeida</em><br><br>
-            <p>Vilanesco Sr. Almeida, por mais que esse tribunal aprecie sua nobre intenção de causar
-                pânico nos jogadores
-                de sua mesa, é nosso dever alertá-lo que a perícia Diplomacia, assim como as demais perícias
-                sociais,
-                não
-                são poderes absolutos ou magias de controle mental. Nos vemos mais uma vez em posição de evocar a
-                pristina
-                Lei Caldela:</p>
-            <p>Quando um jogador declara uma ação, você deve decidir o resultado dela, usando as
-                mecânicas ou seu bom senso.
-                Também deve julgar as reações dos NPCs com base no comportamento dos heróis. Este equilíbrio entre
-                julgamento de interpretação e arbitragem de regras é a essência do “poder” do mestre.</p>
-            <p>Isso posto, o uso “mudar atitude” da perícia Diplomacia está subjugado ao bom senso.
-                Considerando que em uma
-                situação de combate os envolvidos claramente têm atitude “hostil” um contra os outros, alterar essa
-                atitude
-                para “prestativo” enquanto se tenta enfiar as garras no bucho de um colega parece bem contrário ao
-                bom
-                senso. Em casos que o uso de perícias como Diplomacia ou Intimidação parecerem muito absurdos, o
-                mestre
-                pode
-                simplesmente decidir que isso não é possível. Lembrando que é responsabilidade do mestre zelar pelo
-                bom
-                senso e arbitrar o uso devido das regras na mesa.</p>
-            <hr>
+            <div class="searchable">
+                <strong>Vira-casaca</strong><br>
+                <strong>
+                    Posso usar diplomacia com meus monstros para fazer um dos jogadores mudarem de lado?
+                </strong><br>
+                <em>— Cons. Railson Almeida</em><br><br>
+                <p>Vilanesco Sr. Almeida, por mais que esse tribunal aprecie sua nobre intenção de causar
+                    pânico nos jogadores
+                    de sua mesa, é nosso dever alertá-lo que a perícia Diplomacia, assim como as demais perícias
+                    sociais,
+                    não
+                    são poderes absolutos ou magias de controle mental. Nos vemos mais uma vez em posição de evocar a
+                    pristina
+                    Lei Caldela:</p>
+                <p>Quando um jogador declara uma ação, você deve decidir o resultado dela, usando as
+                    mecânicas ou seu bom senso.
+                    Também deve julgar as reações dos NPCs com base no comportamento dos heróis. Este equilíbrio entre
+                    julgamento de interpretação e arbitragem de regras é a essência do “poder” do mestre.</p>
+                <p>Isso posto, o uso “mudar atitude” da perícia Diplomacia está subjugado ao bom senso.
+                    Considerando que em uma
+                    situação de combate os envolvidos claramente têm atitude “hostil” um contra os outros, alterar essa
+                    atitude
+                    para “prestativo” enquanto se tenta enfiar as garras no bucho de um colega parece bem contrário ao
+                    bom
+                    senso. Em casos que o uso de perícias como Diplomacia ou Intimidação parecerem muito absurdos, o
+                    mestre
+                    pode
+                    simplesmente decidir que isso não é possível. Lembrando que é responsabilidade do mestre zelar pelo
+                    bom
+                    senso e arbitrar o uso devido das regras na mesa.</p>
+                <hr>
+            </div>
+
+            <div class="searchable">
+                <strong>Santuário! Santuário!</strong><br>
+                <strong>
+                    Uma vez que um personagem passe no teste de vontade para resistir a magia Santuário, ele anula o
+                    efeito
+                    da
+                    magia para o ataque que ele iria fazer ou para toda a cena?
+                </strong><br>
+                <em>— Cons. Deivis Pereira</em><br><br>
+                <p>Belicosíssimo Sr. Pereira, a magia Santuário tem como objetivo reprimir ações hostis entre
+                    os colegas de
+                    cena. O texto da magia diz:</p>
+                <p>Qualquer criatura que tente fazer uma ação hostil contra o alvo deve fazer um teste de
+                    Vontade. Se falhar,
+                    não consegue, perde a ação e não pode tentar novamente até o fim da cena.</p>
+                <p>Ou seja, caso o personagem falhe no teste, até o final da cena, ele não poderá sequer
+                    tentar fazer uma ação
+                    hostil contra o alvo da magia. Lembrando que a definição de “ação hostil” é qualquer ação que vise
+                    prejudicar o alvo de alguma forma, não apenas despendendo seus valiosos Pontos de Vida.</p>
+                <hr>
+            </div>
+
+            <div class="searchable">
+                <strong>Qual o limite do soco?</strong><br>
+                <strong>
+                    Sobre a sequência destruidora de um lutador, se ela é usada por um lutador que com seu combo causa
+                    4d12
+                    de
+                    dano naturalmente, o uso do poder é inútil por ele ter já o dano máximo em passos possíveis?
+                </strong><br>
+                <em>— Cons. Aguiar Bryan</em><br><br>
+                <p>Sopapíssimo Sr. Aguiar, é com imenso pesar em nossos corações que informamos ao senhor que
+                    sua avaliação está
+                    correta. No estado atual das regras, o limite do dano de armas por aumento em passos é de 4d12. Caso
+                    uma
+                    arma atinja esse limite, qualquer outro efeito que aumenta os passos de dano falha em ser aplicado.
+                </p>
+                <hr>
+            </div>
+
+            <div class="searchable">
+                <strong>Corcel domado</strong><br>
+                <strong>
+                    Considerando que:<br>
+                    • Aliados do tipo montaria costumam dar ações extras que só podem ser usadas para movimento (p.
+                    248).<br>
+                    • Galopar é similar a corrida, quando montado, e requer uma ação completa (p. 116).<br>
+                    • Ação completa requer o gasto de uma ação padrão e uma ação de movimento (p. 219).<br>
+                    Pergunto: É possível galopar duas vezes numa rodada com um cavalo mestre, usando uma completa
+                    (padrão +
+                    movimento) e outra completa (movimento extra x2)?<br>
+                    Adendo: pode-se fazer curva ao usar galopar (parece que sim)? Por qual razão não se pode fazer curva
+                    em
+                    corrida (ou pode ao final de cada teste de corrida)? Galopar corre o risco de cansar a montaria?
+                    Pode-se
+                    alternar entre corrida/galopar e mover-se por deslocamento para evitar se cansar?
+                </strong><br>
+                <em>— Cons. Marcus Lins</em><br><br>
+                <p>Equitíssimo Sr. Lins, esse tribunal vai desmembrar sua dúvida e reorganizar as partes para
+                    melhor
+                    esclarecimento da sentença.</p>
+                <p>1) É possível galopar duas vezes numa rodada com um cavalo mestre, usando uma completa
+                    (padrão + movimento) e
+                    outra completa (movimento extra x2)?</p>
+                <p>R: Não. Conforme apontado pelo senhor mesmo, uma ação completa requer o uso de uma ação
+                    padrão e uma ação de
+                    movimento. Duas ações de movimento não podem ser unidas para gerar uma ação completa, uma vez que
+                    uma
+                    ação
+                    de movimento não se equivale a uma ação padrão. O que a regra permite é substituir sua ação padrão
+                    por
+                    uma
+                    segunda ação de movimento no turno, mas não o contrário.</p>
+                <p>2) Pode-se fazer curva ao usar galopar (parece que sim)? Por qual razão não se pode fazer
+                    curva em corrida
+                    (ou pode ao final de cada teste de corrida)?</p>
+                <p>R: Apesar de sua similaridade em termos de regras e físicos, galopar e corrida são usos
+                    diferentes de
+                    perícias diferentes e não-relacionadas, seguindo cada um suas regras distintas. Isso posto, não
+                    existe
+                    qualquer restrição de direção para o movimento realizado com galopar, mas ainda é necessário fazer
+                    um
+                    teste
+                    de conduzir para galopar sobre terreno difícil.</p>
+                <p>Sobre a razão para as restrições em testes de corrida, elas são mais uma questão de
+                    balanceamento de regras
+                    do que simulação da realidade. Efetivamente, para fazer uma mudança brusca de direção, você precisa
+                    “frear”
+                    e parar de correr, mas simular esse tipo de movimentação em regras deixaria o movimento extremamente
+                    complexo e chato. Por isso, a ação correr simula mais um tiro de 100m, em que o personagem coloca
+                    toda
+                    sua
+                    força e foco em se mover do ponto A ao ponto B na maior velocidade e menor distância possível.</p>
+                <p>3) Galopar pode cansar a montaria?</p>
+                <p>R: Não existe nada nas regras que diga que a montaria tem chance de se cansar ao galopar
+                    ao longo da cena.
+                    Entretanto, para cenas mais longas, como uma viagem, o mestre pode considerar que galopar conta como
+                    marcha
+                    forçada (p. 256).</p>
+                <p>4) Pode-se alternar entre corrida/galopar e mover-se por deslocamento para evitar se
+                    cansar?</p>
+                <p>R: Mais uma vez, corrida e galopar são usos de perícia não-relacionados. Você não pode
+                    correr enquanto
+                    estiver montado, já que seus pés não estão tocando o chão efetivamente você nem sequer está andando!
+                    Em
+                    certos aspectos, galopar é a "versão" de corrida para montarias, e você não pode usar a ação corrida
+                    em
+                    uma
+                    montaria da mesma forma que não pode galopar sem estar montado.</p>
+                <hr>
+            </div>
+
+            <div class="searchable">
+                <strong>Eu, Zumbi</strong><br>
+                <strong>
+                    Saudações, membros do STR! Seguem abaixo dúvidas aleatórias do combeiro de plantão do meu grupo.<br>
+                    1) Golens e mortos-vivos com inteligência nula passam automaticamente em teste de ilusão ou ignoram
+                    ilusões
+                    e conseguem ver personagens invisíveis?<br>
+                    2) É possível deixar um morto-vivo ou golem inconsciente usando raio do enfraquecimento (com o
+                    aprimoramento
+                    para isso)?
+                </strong><br>
+                <em>— Cons. Estevão Costa</em><br><br>
+                <p>Vivíssimo Sr. Costa, esse tribunal tem por obrigação corrigir vossa discordância de
+                    nomenclatura em prol do
+                    bom convívio entre as raças artonianas. “Golem” se refere à raça disponível para personagens
+                    jogadores,
+                    que
+                    tem suas próprias regras definidas no capítulo 1 do livro básico. Já o tipo de criatura se define
+                    pela
+                    palavra “construto”, que classifica todos os tipos de criaturas artificiais, e tem suas regras
+                    definidas
+                    no
+                    capítulo 7.</p>
+                <p>Todos os golens são criaturas do tipo construto, mas certamente nem todos os construtos
+                    são golens, da mesma
+                    forma que os osteons são criaturas do tipo morto-vivo. Isso posto, vamos às dúvidas.</p>
+                <p>1) Criaturas com inteligência nula não utilizam de raciocínio lógico para tomar decisões,
+                    o que faz com que
+                    efeitos mentais, como os causados por alguns encantamentos e ilusões (pag. 162), não funcionem
+                    contra
+                    elas.
+                    Essas criaturas passam automaticamente no teste e desacreditam de ilusões, agindo como se elas não
+                    existissem.
+                    No entanto, isso não afeta suas capacidades de percepção, e não conseguem enxergar criaturas
+                    invisíveis
+                    a
+                    menos que tenham sentidos especiais. Isso porque, em termos de regra, eles simplesmente não podem
+                    ver
+                    algo
+                    invisível,
+                    e não existe teste para o efeito de invisibilidade contra o qual sua “imunidade” pode lhes ajudar. O
+                    alvo do
+                    efeito é a
+                    criatura que se tornou invisível, não as criaturas que estão olhando para ela.</p>
+                <p>2) Pela fria letra da lei, a condição inconsciente não é uma condição de fadiga e,
+                    portanto, afeta construtos
+                    e mortos-vivos. É como se a energia que move essas criaturas fosse “desligada” de alguma forma. No
+                    entanto,
+                    se uma delas passar no teste de Raio do Enfraquecimento, não ficará exausta, pois continua imune a
+                    condições
+                    de fadiga.
+                </p>
+                <hr>
+            </div>
         </div>
 
-        <div class="searchable">
-            <strong>Santuário! Santuário!</strong><br>
-            <strong>
-                Uma vez que um personagem passe no teste de vontade para resistir a magia Santuário, ele anula o
-                efeito
-                da
-                magia para o ataque que ele iria fazer ou para toda a cena?
-            </strong><br>
-            <em>— Cons. Deivis Pereira</em><br><br>
-            <p>Belicosíssimo Sr. Pereira, a magia Santuário tem como objetivo reprimir ações hostis entre
-                os colegas de
-                cena. O texto da magia diz:</p>
-            <p>Qualquer criatura que tente fazer uma ação hostil contra o alvo deve fazer um teste de
-                Vontade. Se falhar,
-                não consegue, perde a ação e não pode tentar novamente até o fim da cena.</p>
-            <p>Ou seja, caso o personagem falhe no teste, até o final da cena, ele não poderá sequer
-                tentar fazer uma ação
-                hostil contra o alvo da magia. Lembrando que a definição de “ação hostil” é qualquer ação que vise
-                prejudicar o alvo de alguma forma, não apenas despendendo seus valiosos Pontos de Vida.</p>
-            <hr>
-        </div>
+        <!-- Conteúdo DB 178 -->
+        <div id="db178" class="container mt-4">
 
-        <div class="searchable">
-            <strong>Qual o limite do soco?</strong><br>
-            <strong>
-                Sobre a sequência destruidora de um lutador, se ela é usada por um lutador que com seu combo causa
-                4d12
-                de
-                dano naturalmente, o uso do poder é inútil por ele ter já o dano máximo em passos possíveis?
-            </strong><br>
-            <em>— Cons. Aguiar Bryan</em><br><br>
-            <p>Sopapíssimo Sr. Aguiar, é com imenso pesar em nossos corações que informamos ao senhor que
-                sua avaliação está
-                correta. No estado atual das regras, o limite do dano de armas por aumento em passos é de 4d12. Caso
-                uma
-                arma atinja esse limite, qualquer outro efeito que aumenta os passos de dano falha em ser aplicado.
-            </p>
-            <hr>
-        </div>
+            <h4>DB 178</h4>
 
-        <div class="searchable">
-            <strong>Corcel domado</strong><br>
-            <strong>
-                Considerando que:<br>
-                • Aliados do tipo montaria costumam dar ações extras que só podem ser usadas para movimento (p.
-                248).<br>
-                • Galopar é similar a corrida, quando montado, e requer uma ação completa (p. 116).<br>
-                • Ação completa requer o gasto de uma ação padrão e uma ação de movimento (p. 219).<br>
-                Pergunto: É possível galopar duas vezes numa rodada com um cavalo mestre, usando uma completa
-                (padrão +
-                movimento) e outra completa (movimento extra x2)?<br>
-                Adendo: pode-se fazer curva ao usar galopar (parece que sim)? Por qual razão não se pode fazer curva
-                em
-                corrida (ou pode ao final de cada teste de corrida)? Galopar corre o risco de cansar a montaria?
-                Pode-se
-                alternar entre corrida/galopar e mover-se por deslocamento para evitar se cansar?
-            </strong><br>
-            <em>— Cons. Marcus Lins</em><br><br>
-            <p>Equitíssimo Sr. Lins, esse tribunal vai desmembrar sua dúvida e reorganizar as partes para
-                melhor
-                esclarecimento da sentença.</p>
-            <p>1) É possível galopar duas vezes numa rodada com um cavalo mestre, usando uma completa
-                (padrão + movimento) e
-                outra completa (movimento extra x2)?</p>
-            <p>R: Não. Conforme apontado pelo senhor mesmo, uma ação completa requer o uso de uma ação
-                padrão e uma ação de
-                movimento. Duas ações de movimento não podem ser unidas para gerar uma ação completa, uma vez que
-                uma
-                ação
-                de movimento não se equivale a uma ação padrão. O que a regra permite é substituir sua ação padrão
-                por
-                uma
-                segunda ação de movimento no turno, mas não o contrário.</p>
-            <p>2) Pode-se fazer curva ao usar galopar (parece que sim)? Por qual razão não se pode fazer
-                curva em corrida
-                (ou pode ao final de cada teste de corrida)?</p>
-            <p>R: Apesar de sua similaridade em termos de regras e físicos, galopar e corrida são usos
-                diferentes de
-                perícias diferentes e não-relacionadas, seguindo cada um suas regras distintas. Isso posto, não
-                existe
-                qualquer restrição de direção para o movimento realizado com galopar, mas ainda é necessário fazer
-                um
-                teste
-                de conduzir para galopar sobre terreno difícil.</p>
-            <p>Sobre a razão para as restrições em testes de corrida, elas são mais uma questão de
-                balanceamento de regras
-                do que simulação da realidade. Efetivamente, para fazer uma mudança brusca de direção, você precisa
-                “frear”
-                e parar de correr, mas simular esse tipo de movimentação em regras deixaria o movimento extremamente
-                complexo e chato. Por isso, a ação correr simula mais um tiro de 100m, em que o personagem coloca
-                toda
-                sua
-                força e foco em se mover do ponto A ao ponto B na maior velocidade e menor distância possível.</p>
-            <p>3) Galopar pode cansar a montaria?</p>
-            <p>R: Não existe nada nas regras que diga que a montaria tem chance de se cansar ao galopar
-                ao longo da cena.
-                Entretanto, para cenas mais longas, como uma viagem, o mestre pode considerar que galopar conta como
-                marcha
-                forçada (p. 256).</p>
-            <p>4) Pode-se alternar entre corrida/galopar e mover-se por deslocamento para evitar se
-                cansar?</p>
-            <p>R: Mais uma vez, corrida e galopar são usos de perícia não-relacionados. Você não pode
-                correr enquanto
-                estiver montado, já que seus pés não estão tocando o chão efetivamente você nem sequer está andando!
-                Em
-                certos aspectos, galopar é a "versão" de corrida para montarias, e você não pode usar a ação corrida
-                em
-                uma
-                montaria da mesma forma que não pode galopar sem estar montado.</p>
-            <hr>
-        </div>
+            <div class="searchable">
+                <p><strong>Malabarismo mágico<br>
 
-        <div class="searchable">
-            <strong>Eu, Zumbi</strong><br>
-            <strong>
-                Saudações, membros do STR! Seguem abaixo dúvidas aleatórias do combeiro de plantão do meu grupo.<br>
-                1) Golens e mortos-vivos com inteligência nula passam automaticamente em teste de ilusão ou ignoram
-                ilusões
-                e conseguem ver personagens invisíveis?<br>
-                2) É possível deixar um morto-vivo ou golem inconsciente usando raio do enfraquecimento (com o
-                aprimoramento
-                para isso)?
-            </strong><br>
-            <em>— Cons. Estevão Costa</em><br><br>
-            <p>Vivíssimo Sr. Costa, esse tribunal tem por obrigação corrigir vossa discordância de
-                nomenclatura em prol do
-                bom convívio entre as raças artonianas. “Golem” se refere à raça disponível para personagens
-                jogadores,
-                que
-                tem suas próprias regras definidas no capítulo 1 do livro básico. Já o tipo de criatura se define
-                pela
-                palavra “construto”, que classifica todos os tipos de criaturas artificiais, e tem suas regras
-                definidas
-                no
-                capítulo 7.</p>
-            <p>Todos os golens são criaturas do tipo construto, mas certamente nem todos os construtos
-                são golens, da mesma
-                forma que os osteons são criaturas do tipo morto-vivo. Isso posto, vamos às dúvidas.</p>
-            <p>1) Criaturas com inteligência nula não utilizam de raciocínio lógico para tomar decisões,
-                o que faz com que
-                efeitos mentais, como os causados por alguns encantamentos e ilusões (pag. 162), não funcionem
-                contra
-                elas.
-                Essas criaturas passam automaticamente no teste e desacreditam de ilusões, agindo como se elas não
-                existissem.
-                No entanto, isso não afeta suas capacidades de percepção, e não conseguem enxergar criaturas
-                invisíveis
-                a
-                menos que tenham sentidos especiais. Isso porque, em termos de regra, eles simplesmente não podem
-                ver
-                algo
-                invisível,
-                e não existe teste para o efeito de invisibilidade contra o qual sua “imunidade” pode lhes ajudar. O
-                alvo do
-                efeito é a
-                criatura que se tornou invisível, não as criaturas que estão olhando para ela.</p>
-            <p>2) Pela fria letra da lei, a condição inconsciente não é uma condição de fadiga e,
-                portanto, afeta construtos
-                e mortos-vivos. É como se a energia que move essas criaturas fosse “desligada” de alguma forma. No
-                entanto,
-                se uma delas passar no teste de Raio do Enfraquecimento, não ficará exausta, pois continua imune a
-                condições
-                de fadiga.
-            </p>
-            <hr>
-        </div>
-    </div>
+                        Como funciona a regra de execução de magias no caso de bardos?<br>
+                        Sendo utilizado um instrumento ou uma arma, ele ainda precisa ter a mão livre? A única
+                        penalidade
+                        ignorada
+                        para as magias arcanas dele é a de armaduras leves? Se um bardo usar uma arma e um escudo,
+                        ele
+                        ainda
+                        pode
+                        lançar magias?
+                    </strong><br></p>
+                <em>— Cons. Gustavo Samuel</em><br><br>
 
-    <!-- Conteúdo DB 178 -->
-    <div id="db178" class="container mt-4">
-
-        <h4>DB 178</h4>
-
-        <div class="searchable">
-            <p><strong>Malabarismo mágico<br>
-
-                    Como funciona a regra de execução de magias no caso de bardos?<br>
-                    Sendo utilizado um instrumento ou uma arma, ele ainda precisa ter a mão livre? A única
-                    penalidade
-                    ignorada
-                    para as magias arcanas dele é a de armaduras leves? Se um bardo usar uma arma e um escudo,
-                    ele
+                <p>Artístico sr. Samuel, conforme consta nas regras de magia do <strong>Livro Básico de
+                        Tormenta20</strong> (página 160), lançar uma magia envolve pronunciar palavras mágicas e
+                    gesticular
+                    com
+                    pelo menos uma mão livre. Essa regra vale tanto para magias arcanas quanto divinas,
+                    independentemente da
+                    classe do personagem.<br>
+                    Se ele segura um instrumento musical com as duas mãos, pode soltar uma delas para fazer os
+                    gestos
+                    mágicos,
+                    considerando que instrumentos maiores, como um alaúde, podem ter uma bandoleira para apoiar
+                    nos ombros. No entanto, empunhar uma arma e um escudo pesado deixa as mãos ocupadas,
+                    impossibilitando os
+                    gestos. Note ainda que um bardo não é obrigado a ter um instrumento musical para usar suas
+                    habilidades,
+                    inclusive magias.<br>
+                    A relação do bardo com armaduras leves é eliminar a necessidade de testes de misticismo para
+                    lançar
+                    uma
+                    magia arcana vestindo uma armadura leve (pág. 161 – Armaduras e Magia Arcana), mas ele não
+                    ignora a
+                    penalidade de armadura em si (para outros fins, como sua aplicação em certas perícias). Ele
                     ainda
                     pode
-                    lançar magias?
-                </strong><br></p>
-            <em>— Cons. Gustavo Samuel</em><br><br>
-
-            <p>Artístico sr. Samuel, conforme consta nas regras de magia do <strong>Livro Básico de
-                    Tormenta20</strong> (página 160), lançar uma magia envolve pronunciar palavras mágicas e
-                gesticular
-                com
-                pelo menos uma mão livre. Essa regra vale tanto para magias arcanas quanto divinas,
-                independentemente da
-                classe do personagem.<br>
-                Se ele segura um instrumento musical com as duas mãos, pode soltar uma delas para fazer os
-                gestos
-                mágicos,
-                considerando que instrumentos maiores, como um alaúde, podem ter uma bandoleira para apoiar
-                nos ombros. No entanto, empunhar uma arma e um escudo pesado deixa as mãos ocupadas,
-                impossibilitando os
-                gestos. Note ainda que um bardo não é obrigado a ter um instrumento musical para usar suas
-                habilidades,
-                inclusive magias.<br>
-                A relação do bardo com armaduras leves é eliminar a necessidade de testes de misticismo para
-                lançar
-                uma
-                magia arcana vestindo uma armadura leve (pág. 161 – Armaduras e Magia Arcana), mas ele não
-                ignora a
-                penalidade de armadura em si (para outros fins, como sua aplicação em certas perícias). Ele
-                ainda
-                pode
-                lançar magias usando uma arma e um escudo leve que, conforme indicado em sua descrição,
-                possibilita
-                o
-                uso da
-                mão para empunhar objetos e fazer os gestos e não requer testes adicionais (a regra da página
-                161 é
-                só
-                para
-                armaduras, não para escudos), mas não poderia fazer isso empunhando uma arma e um escudo pesado.
-            </p>
-            <hr>
-        </div>
-
-        <div class="searchable">
-            <strong>Passinho de ajuste</strong><br>
-            <strong>
-                Como é feito o cálculo para os passos de dano de armas? A tabela mostra até +3 passos, mas caso
-                precise
-                aumentar em mais, como calculo? Exemplo: Lutador com 9 poderes da Tormenta, sendo um deles corpo
-                aberrante
-                (+3 passos de dano) e usando uma manopla de adamante (+1 passo de dano) ficaria com +4 passos de
-                dano.
-                Isso
-                sem falar se estiver usando uma manopla aumentada (+1 passo de dano) ou ser beneficiado com a
-                magia
-                aumentar tamanho.
-            </strong><br>
-            <em>— Cons. Joel Coelho</em><br><br>
-            <p>Pugilíssimo sr Coelho, a tabela de aumento de dano para armas é uma progressão linear
-                organizada em forma de
-                tabela para facilitar a consulta rápida. Caso precise aumentar em mais de três passos o dano de
-                uma
-                arma,
-                consulte sempre a progressão do valor na linha de baixo.</p>
-            <p>Usando seu próprio exemplo, temos um lutador de décimo nível (no mínimo) que tem total
-                desapego por seu
-                carisma, usando uma manopla grande de adamante e afetado pela magia alterar tamanho, somando um
-                total de
-                cinco passos de aumento no dano. Seu ataque desarmado padrão é 1d10, aumentando então para 1d12,
-                depois
-                3d6,
-                4d6, 4d8, e então para 4d12. Lembrando que 4d12 é o limite de aumento de passos de dano para
-                qualquer
-                arma.
-            </p>
-            <p>Importante observar que usar manoplas de um tamanho maior não aumentam seu dano, apenas
-                fazem o que mesmo que
-                fariam para uma criatura Grande: tornam o dano de seu ataque desarmado letal.</p>
-            <hr>
-        </div>
-
-        <div class="searchable">
-            <strong>Sem tempo, irmão</strong><br>
-            <strong>
-                Com relação à magia controlar o tempo usada com o efeito de congelar o tempo:<br>
-                1) O que acontece se objetos em minha posse deixarem de tocar meu corpo? Eles continuam se
-                movendo
-                ou
-                ficam
-                congelados? Se eles ficam congelados, como isso interage com itens disparados ou
-                arremessados?<br>
-                2) É dito que magias de área com duração maior que o efeito do congelar o tempo agem normalmente
-                após
-                congelar o tempo acabar, porém caso eu lance uma magia com duração de 5 rodadas por exemplo, no
-                primeiro
-                turno com o tempo congelado, ao término dos 3 turnos com o tempo parado essa magia irá perdurar
-                por
-                5
-                turnos
-                ou por apenas mais 2? Em suma, a duração da magia continua contando com o tempo parado?<br>
-                3) Também é dito que criaturas e objetos em posse de criaturas ficam imunes a meus ataques e
-                magias.
-                Contudo
-                eu ainda posso interagir com eles? Eu poderia mover uma criatura paralisada por congelar o tempo
-                para
-                outro
-                local, isso acarretando em uma situação perigosa para a mesma, como deixá-la em queda livre?
-                Caso eu
-                tenha
-                deixado a ação preparada para usar a magia quando um inimigo atacar, eu poderia tirar um aliado
-                da
-                frente do
-                ataque? Eu queria saber se eu poderia afetar criaturas com algo que não fosse considerado um
-                ataque
-                ou
-                magia, como por exemplo, usar bálsamos restauradores e essência de mana nos meus aliados.<br>
-                4) Posso usar venenos, poções e engenhocas durante o efeito da magia?
-            </strong><br>
-            <em>— Cons. Lucas Waterkemper Alberton</em><br><br>
-            <p>Cérele sr. Alberton, como todos os efeitos não mecânicos em magias, seu mestre sempre tem
-                a palavra final
-                sobre a interação da magia com o ambiente de jogo — no caso, a claríssima intenção de posicionar
-                uma
-                bigorna
-                sobre a cabeça de um adversário.</p>
-            <p>1) A interpretação mais comum seria que objetos largados por você ficariam igualmente
-                congelados no tempo,
-                passando a se mover assim que o efeito da magia terminar. No entanto, leve em consideração que
-                arremessar
-                qualquer objeto contra um alvo é uma ação de ataque à distância, que é terminantemente vetada
-                durando os
-                efeitos de congelar o tempo. Mesmo objetos largados a grandes alturas precisam ser mirados
-                usando um
-                teste
-                de pontaria para acertar um alvo e, por isso, são considerados ataques. No entanto, você poderia
-                usar
-                uma ou
-                mais de suas ações para arremessar uma bomba ou poção-granada, que ficaria congelada no ar,
-                atingindo o
-                ponto de impacto escolhido assim que o efeito de congelar o tempo terminar.</p>
-            <p>2) Sobre a duração de magias, ela passa a ser contada depois que o efeito de congelar o
-                tempo terminar, já
-                que durante esse período é como se nenhum tempo tivesse passado. É como se a magia também
-                ficasse
-                congelada
-                no tempo.</p>
-            <p>3) Não é possível mover criaturas durante o efeito de congelar o tempo porque, em termos
-                de regra, essas são
-                manobras de combate (agarrar, empurrar, etc.), que são realizadas através de ataques corpo a
-                corpo.
-                Também
-                não é possível fazer criaturas beberem poções, já que essa seria uma ação da criatura ou uma
-                ação
-                agarrar,
-                como dito na página 327. Sobre o uso de outros itens, que não dependem de ações da criatura ou
-                manobras
-                de
-                combate, como o caso do bálsamo, fica a critério do mestre. Aplicar o bálsamo numa ferida por
-                debaixo de
-                uma
-                armadura completa, por exemplo, pode ser impossível por conta da limitação de interagir com o
-                objeto
-                em
-                posse de outra criatura.</p>
-            <p>4) Você pode aplicar venenos em suas armas ou mesmo em objetos que não estão em posse de
-                nenhum outro
-                personagem, como um caldeirão de comida no centro da mesa. Você pode beber poções, mas não
-                usá-las
-                em
-                outras
-                criaturas, conforme falamos anteriormente. Você pode ativar engenhocas, mas não pode ter outras
-                criaturas
-                como alvo. Como diz o texto de engenhocas (pg. 71): para outros custos e limitações, o efeito
-                gerado
-                pela
-                engenhoca funciona exatamente como uma magia. Neste caso, a imunidade contra suas magias se
-                estende
-                para
-                suas engenhocas.</p>
-            <hr>
-        </div>
-
-        <div class="searchable">
-            <strong>Na mão pequena</strong><br>
-            <strong>Quais itens exatamente são possíveis de se utilizar punga? Posso roubar a mochila do inimigo
-                com
-                todos
-                os itens dele? Posso roubar a arma que está na bainha? Posso roubar a roupa dele? Posso roubar o
-                escudo
-                que
-                está na mão? Posso roubar a armadura que está com suas peças encaixadas nele as desencaixando?
-                Poderia
-                roubar a arma dele?</strong><br>
-            <em>— Cons. João Portilho</em><br><br>
-            <p>Larapiante sr. Portilho, mais uma vez este tribunal evoca a máxima declarada pelo
-                excelentíssimo Ministro
-                Leonel Caldela, imortalizada na página 228 do Livro Básico:</p>
-            <p>"Quando um jogador declara uma ação, você (o mestre) deve decidir o resultado dela, usando
-                as mecânicas ou
-                seu bom senso. Também deve julgar as reações dos NPCs com base no comportamento dos heróis. Este
-                equilíbrio
-                entre julgamento de interpretação e arbitragem de regras é a essência do 'poder' do mestre."</p>
-            <p>Por definição, uma punga é um furto despercebido de um pequeno objeto que possa ser pego
-                (esteja solto, seja
-                fácil de remover, etc., a critério do mestre). Pungar objetos grandes como um escudo ou arma
-                pode
-                até
-                ser
-                possível em níveis mais fantasiosos, mas, em termos gerais, é praticamente impossível e uma
-                óbvia
-                condição
-                desfavorável, que pode e deve acarretar em penalidades para o personagem no teste de punga (a
-                critério
-                do
-                mestre, mas algo mais suave do que -20 não seria adequado).</p>
-            <p>Já objetos vestidos, como roupas e armaduras, requerem um movimento específico e complexo
-                demais para ser
-                realizado em uma única ação padrão, muito menos de forma despercebida. Remover uma armadura
-                leve,
-                por
-                exemplo, requer uma ação completa. Este é um bom exemplo de quando o bom senso do mestre vale
-                mais
-                do
-                que
-                qualquer descrição de regra.</p>
-            <hr>
-        </div>
-
-        <div class="searchable">
-            <p><strong>Arremessando dúvidas</strong><br>
-                <strong>Bom dia, tarde ou noite! Meus queridos balanceadores do bonk nosso de cada dia, podem me
-                    chamar
-                    de
-                    Kasu. Eu gostaria de botar para jogo algumas dúvidas a respeito do estilo de combate mais
-                    esquecido
-                    de
-                    todos, mas um dos mais ESTILOSOS entre todos os estilos: o Estilo de Arremesso. O texto do
-                    poder
-                    Estilo
-                    de Arremesso dita que " Você pode sacar armas de arremesso como uma ação livre e recebe +2
-                    nas
-                    rolagens de dano com elas. Pré-requisito: treinado em Pontaria." Pag 125.<br>
-                    1) O que são "armas de arremesso"? Não existe essa categoria na lista de armas, e nem
-                    essahabilidade
-                    para armas visto na Pag. 147. Existem algumas armas onde está escrito "pode ser arremessada"
-                    no
-                    fim
-                    das
-                    descrições, mas arremessar uma arma é uma manobra que se pode fazer com qualquer arma,
-                    assumindo
-                    um
-                    -5
-                    no acerto, como visto na pag 141 sobre Alcance. Isso significa que se eu arremessar um
-                    machado
-                    táurico,
-                    ganho o bonus de +2 no dano? Um machado táurico arremessado, vira uma "arma de arremesso"?
-                    Eu
-                    entendo
-                    que essa "categoria" de armas sejam todas aquelas que tenham "alcance curto" na tabela de
-                    armas,
-                    ou
-                    todas que tenham em sua descrição o texto de "pode ser arremessada", mas gostaria de uma
-                    confirmação
-                    de
-                    como definir uma "arma de arremesso".<br>
-                    2) Da forma como está escrito, eu recebo esse bônus de +2 em qualquer ataque usando uma
-                    "arma de
-                    arremesso", não apenas quando eu, de fato, arremesso ela. Era essa a intenção? Eu entendo
-                    que
-                    sim,
-                    pois
-                    o intuito desse estilo me parece ser um mix entre ataques corpo a corpo e a distância, a
-                    depender da
-                    situação, e por isso o bônus deve funcionar independente do tipo de ataque, mas gostaria de
-                    uma
-                    confirmação. <br>
-                    3) Estilos como duas armas ou ambidestria funcionam com armas de arremesso em conjunto com o
-                    estilo
-                    de
-                    arremesso? Eles funcionam em conjunto com Disparo Rápido? Disparo Rápido funciona com armas
-                    de
-                    arremesso
-                    (já que pede estilo de arremesso como requisito)? Se sim, isso significa que Disparo Rápido
-                    pede
+                    lançar magias usando uma arma e um escudo leve que, conforme indicado em sua descrição,
+                    possibilita
                     o
-                    mesmo
-                    tipo de arma, e não a mesma arma, para ser usado?<br>
-                    Enfim, obrigado desde já! E parabéns pelo programa, ele está perfeito no novo
-                    formato!</strong>
-            </p>
-            <p><em>— Cons. Gabriel Moreira</em></p>
-            <p>Belicosíssimo sr. Kasu, antes de mais nada, esse tribunal agradece os elogios. Vamos aos
-                pareceres divididos
-                entre suas dúvidas.<br>
-                1) Por definição, armas de arremesso são todas aquelas que, em sua descrição, especificam
-                que podem ser arremessadas. Armas que se enquadram nessa descrição são beneficiadas pelo poder
-                Estilo de
-                Arremesso.
-                Arremessar armas sem alcance é possível, assim como arremessar qualquer objeto, como um tijolo,
-                mas
-                isso
-                não torna esse objeto uma arma de arremesso, já que ele não foi construído para essa
-                finalidade.<br>
-                2) Embora eu entenda seu raciocínio, neste caso o sr. não está correto. "Arremesso" não é uma
-                habilidade
-                de arma. É um tipo de arma de ataque à distância. Uma adaga (e machadinha, lança...) é uma arma
-                corpo a
-                corpo que pode ser usada como uma arma de ataque à distância de arremesso. Se ela é usada no
-                corpo a
-                corpo,
-                é de corpo a corpo. Se ela é arremessada, é de arremesso. Ela pode ser sacada com ação livre por
-                quem
-                tem o
-                Estilo de Arremesso, porque ela é uma arma de arremesso. Mas se for usada para um ataque corpo a
-                corpo,
-                não ganha o bônus de dano porque não está sendo usada como uma arma de arremesso (naquele
-                momento,
-                ela
-                não é
-                uma arma de arremesso).<br>
-                3) Sobre a interação com outros estilos, se você cumprir os requisitos de Estilo de Duas Armas —
-                estar usando duas armas e pelo menos uma delas ser leve, mesmo que sejam armas de arremesso —,
-                pode fazer dois ataques (sejam corpo a corpo ou à distância), um com cada arma, sem a penalidade
-                caso possua Ambidestria. Da mesma forma, se cumprir as condições de Disparo Rápido, você pode
-                fazer dois ataques (seja com um arco longo ou arremessando duas adagas, por exemplo). E mais uma
-                vez o sr. está correto; Disparo Rápido pede que o ataque adicional seja feito com o mesmo tipo
-                de arma – uma arma de ataque à distância – não exatamente com a mesma arma. No entanto, não é
-                possível fazer três ataques combinando Disparo Rápido e Estilo de Duas Armas, pois este último
-                poder requer que você faça uma ação atacar para ser ativado, enquanto que o primeiro não é uma
-                ação deste tipo, mas sim uma ação completa específica.<br>
-                Na prática, ambos os poderes são úteis, mas para coisas diferentes; Disparo Rápido permite o uso
-                de poderes como Estilo de Uma Mão ao usar armas de arremesso, por exemplo, enquanto Estilo de
-                Duas Armas
-                combina bem com Ambidestria.</p>
-            <hr>
+                    uso da
+                    mão para empunhar objetos e fazer os gestos e não requer testes adicionais (a regra da página
+                    161 é
+                    só
+                    para
+                    armaduras, não para escudos), mas não poderia fazer isso empunhando uma arma e um escudo pesado.
+                </p>
+                <hr>
+            </div>
 
+            <div class="searchable">
+                <strong>Passinho de ajuste</strong><br>
+                <strong>
+                    Como é feito o cálculo para os passos de dano de armas? A tabela mostra até +3 passos, mas caso
+                    precise
+                    aumentar em mais, como calculo? Exemplo: Lutador com 9 poderes da Tormenta, sendo um deles corpo
+                    aberrante
+                    (+3 passos de dano) e usando uma manopla de adamante (+1 passo de dano) ficaria com +4 passos de
+                    dano.
+                    Isso
+                    sem falar se estiver usando uma manopla aumentada (+1 passo de dano) ou ser beneficiado com a
+                    magia
+                    aumentar tamanho.
+                </strong><br>
+                <em>— Cons. Joel Coelho</em><br><br>
+                <p>Pugilíssimo sr Coelho, a tabela de aumento de dano para armas é uma progressão linear
+                    organizada em forma de
+                    tabela para facilitar a consulta rápida. Caso precise aumentar em mais de três passos o dano de
+                    uma
+                    arma,
+                    consulte sempre a progressão do valor na linha de baixo.</p>
+                <p>Usando seu próprio exemplo, temos um lutador de décimo nível (no mínimo) que tem total
+                    desapego por seu
+                    carisma, usando uma manopla grande de adamante e afetado pela magia alterar tamanho, somando um
+                    total de
+                    cinco passos de aumento no dano. Seu ataque desarmado padrão é 1d10, aumentando então para 1d12,
+                    depois
+                    3d6,
+                    4d6, 4d8, e então para 4d12. Lembrando que 4d12 é o limite de aumento de passos de dano para
+                    qualquer
+                    arma.
+                </p>
+                <p>Importante observar que usar manoplas de um tamanho maior não aumentam seu dano, apenas
+                    fazem o que mesmo que
+                    fariam para uma criatura Grande: tornam o dano de seu ataque desarmado letal.</p>
+                <hr>
+            </div>
+
+            <div class="searchable">
+                <strong>Sem tempo, irmão</strong><br>
+                <strong>
+                    Com relação à magia controlar o tempo usada com o efeito de congelar o tempo:<br>
+                    1) O que acontece se objetos em minha posse deixarem de tocar meu corpo? Eles continuam se
+                    movendo
+                    ou
+                    ficam
+                    congelados? Se eles ficam congelados, como isso interage com itens disparados ou
+                    arremessados?<br>
+                    2) É dito que magias de área com duração maior que o efeito do congelar o tempo agem normalmente
+                    após
+                    congelar o tempo acabar, porém caso eu lance uma magia com duração de 5 rodadas por exemplo, no
+                    primeiro
+                    turno com o tempo congelado, ao término dos 3 turnos com o tempo parado essa magia irá perdurar
+                    por
+                    5
+                    turnos
+                    ou por apenas mais 2? Em suma, a duração da magia continua contando com o tempo parado?<br>
+                    3) Também é dito que criaturas e objetos em posse de criaturas ficam imunes a meus ataques e
+                    magias.
+                    Contudo
+                    eu ainda posso interagir com eles? Eu poderia mover uma criatura paralisada por congelar o tempo
+                    para
+                    outro
+                    local, isso acarretando em uma situação perigosa para a mesma, como deixá-la em queda livre?
+                    Caso eu
+                    tenha
+                    deixado a ação preparada para usar a magia quando um inimigo atacar, eu poderia tirar um aliado
+                    da
+                    frente do
+                    ataque? Eu queria saber se eu poderia afetar criaturas com algo que não fosse considerado um
+                    ataque
+                    ou
+                    magia, como por exemplo, usar bálsamos restauradores e essência de mana nos meus aliados.<br>
+                    4) Posso usar venenos, poções e engenhocas durante o efeito da magia?
+                </strong><br>
+                <em>— Cons. Lucas Waterkemper Alberton</em><br><br>
+                <p>Cérele sr. Alberton, como todos os efeitos não mecânicos em magias, seu mestre sempre tem
+                    a palavra final
+                    sobre a interação da magia com o ambiente de jogo — no caso, a claríssima intenção de posicionar
+                    uma
+                    bigorna
+                    sobre a cabeça de um adversário.</p>
+                <p>1) A interpretação mais comum seria que objetos largados por você ficariam igualmente
+                    congelados no tempo,
+                    passando a se mover assim que o efeito da magia terminar. No entanto, leve em consideração que
+                    arremessar
+                    qualquer objeto contra um alvo é uma ação de ataque à distância, que é terminantemente vetada
+                    durando os
+                    efeitos de congelar o tempo. Mesmo objetos largados a grandes alturas precisam ser mirados
+                    usando um
+                    teste
+                    de pontaria para acertar um alvo e, por isso, são considerados ataques. No entanto, você poderia
+                    usar
+                    uma ou
+                    mais de suas ações para arremessar uma bomba ou poção-granada, que ficaria congelada no ar,
+                    atingindo o
+                    ponto de impacto escolhido assim que o efeito de congelar o tempo terminar.</p>
+                <p>2) Sobre a duração de magias, ela passa a ser contada depois que o efeito de congelar o
+                    tempo terminar, já
+                    que durante esse período é como se nenhum tempo tivesse passado. É como se a magia também
+                    ficasse
+                    congelada
+                    no tempo.</p>
+                <p>3) Não é possível mover criaturas durante o efeito de congelar o tempo porque, em termos
+                    de regra, essas são
+                    manobras de combate (agarrar, empurrar, etc.), que são realizadas através de ataques corpo a
+                    corpo.
+                    Também
+                    não é possível fazer criaturas beberem poções, já que essa seria uma ação da criatura ou uma
+                    ação
+                    agarrar,
+                    como dito na página 327. Sobre o uso de outros itens, que não dependem de ações da criatura ou
+                    manobras
+                    de
+                    combate, como o caso do bálsamo, fica a critério do mestre. Aplicar o bálsamo numa ferida por
+                    debaixo de
+                    uma
+                    armadura completa, por exemplo, pode ser impossível por conta da limitação de interagir com o
+                    objeto
+                    em
+                    posse de outra criatura.</p>
+                <p>4) Você pode aplicar venenos em suas armas ou mesmo em objetos que não estão em posse de
+                    nenhum outro
+                    personagem, como um caldeirão de comida no centro da mesa. Você pode beber poções, mas não
+                    usá-las
+                    em
+                    outras
+                    criaturas, conforme falamos anteriormente. Você pode ativar engenhocas, mas não pode ter outras
+                    criaturas
+                    como alvo. Como diz o texto de engenhocas (pg. 71): para outros custos e limitações, o efeito
+                    gerado
+                    pela
+                    engenhoca funciona exatamente como uma magia. Neste caso, a imunidade contra suas magias se
+                    estende
+                    para
+                    suas engenhocas.</p>
+                <hr>
+            </div>
+
+            <div class="searchable">
+                <strong>Na mão pequena</strong><br>
+                <strong>Quais itens exatamente são possíveis de se utilizar punga? Posso roubar a mochila do inimigo
+                    com
+                    todos
+                    os itens dele? Posso roubar a arma que está na bainha? Posso roubar a roupa dele? Posso roubar o
+                    escudo
+                    que
+                    está na mão? Posso roubar a armadura que está com suas peças encaixadas nele as desencaixando?
+                    Poderia
+                    roubar a arma dele?</strong><br>
+                <em>— Cons. João Portilho</em><br><br>
+                <p>Larapiante sr. Portilho, mais uma vez este tribunal evoca a máxima declarada pelo
+                    excelentíssimo Ministro
+                    Leonel Caldela, imortalizada na página 228 do Livro Básico:</p>
+                <p>"Quando um jogador declara uma ação, você (o mestre) deve decidir o resultado dela, usando
+                    as mecânicas ou
+                    seu bom senso. Também deve julgar as reações dos NPCs com base no comportamento dos heróis. Este
+                    equilíbrio
+                    entre julgamento de interpretação e arbitragem de regras é a essência do 'poder' do mestre."</p>
+                <p>Por definição, uma punga é um furto despercebido de um pequeno objeto que possa ser pego
+                    (esteja solto, seja
+                    fácil de remover, etc., a critério do mestre). Pungar objetos grandes como um escudo ou arma
+                    pode
+                    até
+                    ser
+                    possível em níveis mais fantasiosos, mas, em termos gerais, é praticamente impossível e uma
+                    óbvia
+                    condição
+                    desfavorável, que pode e deve acarretar em penalidades para o personagem no teste de punga (a
+                    critério
+                    do
+                    mestre, mas algo mais suave do que -20 não seria adequado).</p>
+                <p>Já objetos vestidos, como roupas e armaduras, requerem um movimento específico e complexo
+                    demais para ser
+                    realizado em uma única ação padrão, muito menos de forma despercebida. Remover uma armadura
+                    leve,
+                    por
+                    exemplo, requer uma ação completa. Este é um bom exemplo de quando o bom senso do mestre vale
+                    mais
+                    do
+                    que
+                    qualquer descrição de regra.</p>
+                <hr>
+            </div>
+
+            <div class="searchable">
+                <p><strong>Arremessando dúvidas</strong><br>
+                    <strong>Bom dia, tarde ou noite! Meus queridos balanceadores do bonk nosso de cada dia, podem me
+                        chamar
+                        de
+                        Kasu. Eu gostaria de botar para jogo algumas dúvidas a respeito do estilo de combate mais
+                        esquecido
+                        de
+                        todos, mas um dos mais ESTILOSOS entre todos os estilos: o Estilo de Arremesso. O texto do
+                        poder
+                        Estilo
+                        de Arremesso dita que " Você pode sacar armas de arremesso como uma ação livre e recebe +2
+                        nas
+                        rolagens de dano com elas. Pré-requisito: treinado em Pontaria." Pag 125.<br>
+                        1) O que são "armas de arremesso"? Não existe essa categoria na lista de armas, e nem
+                        essahabilidade
+                        para armas visto na Pag. 147. Existem algumas armas onde está escrito "pode ser arremessada"
+                        no
+                        fim
+                        das
+                        descrições, mas arremessar uma arma é uma manobra que se pode fazer com qualquer arma,
+                        assumindo
+                        um
+                        -5
+                        no acerto, como visto na pag 141 sobre Alcance. Isso significa que se eu arremessar um
+                        machado
+                        táurico,
+                        ganho o bonus de +2 no dano? Um machado táurico arremessado, vira uma "arma de arremesso"?
+                        Eu
+                        entendo
+                        que essa "categoria" de armas sejam todas aquelas que tenham "alcance curto" na tabela de
+                        armas,
+                        ou
+                        todas que tenham em sua descrição o texto de "pode ser arremessada", mas gostaria de uma
+                        confirmação
+                        de
+                        como definir uma "arma de arremesso".<br>
+                        2) Da forma como está escrito, eu recebo esse bônus de +2 em qualquer ataque usando uma
+                        "arma de
+                        arremesso", não apenas quando eu, de fato, arremesso ela. Era essa a intenção? Eu entendo
+                        que
+                        sim,
+                        pois
+                        o intuito desse estilo me parece ser um mix entre ataques corpo a corpo e a distância, a
+                        depender da
+                        situação, e por isso o bônus deve funcionar independente do tipo de ataque, mas gostaria de
+                        uma
+                        confirmação. <br>
+                        3) Estilos como duas armas ou ambidestria funcionam com armas de arremesso em conjunto com o
+                        estilo
+                        de
+                        arremesso? Eles funcionam em conjunto com Disparo Rápido? Disparo Rápido funciona com armas
+                        de
+                        arremesso
+                        (já que pede estilo de arremesso como requisito)? Se sim, isso significa que Disparo Rápido
+                        pede
+                        o
+                        mesmo
+                        tipo de arma, e não a mesma arma, para ser usado?<br>
+                        Enfim, obrigado desde já! E parabéns pelo programa, ele está perfeito no novo
+                        formato!</strong>
+                </p>
+                <p><em>— Cons. Gabriel Moreira</em></p>
+                <p>Belicosíssimo sr. Kasu, antes de mais nada, esse tribunal agradece os elogios. Vamos aos
+                    pareceres divididos
+                    entre suas dúvidas.<br>
+                    1) Por definição, armas de arremesso são todas aquelas que, em sua descrição, especificam
+                    que podem ser arremessadas. Armas que se enquadram nessa descrição são beneficiadas pelo poder
+                    Estilo de
+                    Arremesso.
+                    Arremessar armas sem alcance é possível, assim como arremessar qualquer objeto, como um tijolo,
+                    mas
+                    isso
+                    não torna esse objeto uma arma de arremesso, já que ele não foi construído para essa
+                    finalidade.<br>
+                    2) Embora eu entenda seu raciocínio, neste caso o sr. não está correto. "Arremesso" não é uma
+                    habilidade
+                    de arma. É um tipo de arma de ataque à distância. Uma adaga (e machadinha, lança...) é uma arma
+                    corpo a
+                    corpo que pode ser usada como uma arma de ataque à distância de arremesso. Se ela é usada no
+                    corpo a
+                    corpo,
+                    é de corpo a corpo. Se ela é arremessada, é de arremesso. Ela pode ser sacada com ação livre por
+                    quem
+                    tem o
+                    Estilo de Arremesso, porque ela é uma arma de arremesso. Mas se for usada para um ataque corpo a
+                    corpo,
+                    não ganha o bônus de dano porque não está sendo usada como uma arma de arremesso (naquele
+                    momento,
+                    ela
+                    não é
+                    uma arma de arremesso).<br>
+                    3) Sobre a interação com outros estilos, se você cumprir os requisitos de Estilo de Duas Armas —
+                    estar usando duas armas e pelo menos uma delas ser leve, mesmo que sejam armas de arremesso —,
+                    pode fazer dois ataques (sejam corpo a corpo ou à distância), um com cada arma, sem a penalidade
+                    caso possua Ambidestria. Da mesma forma, se cumprir as condições de Disparo Rápido, você pode
+                    fazer dois ataques (seja com um arco longo ou arremessando duas adagas, por exemplo). E mais uma
+                    vez o sr. está correto; Disparo Rápido pede que o ataque adicional seja feito com o mesmo tipo
+                    de arma – uma arma de ataque à distância – não exatamente com a mesma arma. No entanto, não é
+                    possível fazer três ataques combinando Disparo Rápido e Estilo de Duas Armas, pois este último
+                    poder requer que você faça uma ação atacar para ser ativado, enquanto que o primeiro não é uma
+                    ação deste tipo, mas sim uma ação completa específica.<br>
+                    Na prática, ambos os poderes são úteis, mas para coisas diferentes; Disparo Rápido permite o uso
+                    de poderes como Estilo de Uma Mão ao usar armas de arremesso, por exemplo, enquanto Estilo de
+                    Duas Armas
+                    combina bem com Ambidestria.</p>
+                <hr>
+
+            </div>
         </div>
     </div>
 
@@ -1233,6 +1411,7 @@
             if (selectedDB === 'all') {
                 document.getElementById('db207').style.display = 'block';
                 document.getElementById('db206').style.display = 'block';
+                document.getElementById('db205').style.display = 'block';
                 document.getElementById('db203').style.display = 'block';
                 document.getElementById('db200').style.display = 'block';
                 document.getElementById('db179').style.display = 'block';
@@ -1240,6 +1419,7 @@
             } else {
                 document.getElementById('db207').style.display = 'none';
                 document.getElementById('db206').style.display = 'none';
+                document.getElementById('db205').style.display = 'none';
                 document.getElementById('db203').style.display = 'none';
                 document.getElementById('db200').style.display = 'none';
                 document.getElementById('db179').style.display = 'none';
@@ -1263,6 +1443,18 @@
                 }
             });
         });
+
+        const checkbox = document.getElementById('check');
+        const palavraMarcada = document.getElementById('palavra-marcada');
+
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                palavraMarcada.style.display = 'none'; // Ocultar conteúdo
+            } else {
+                palavraMarcada.style.display = 'block'; // Exibir conteúdo
+            }
+        });
+
     </script>
 </body>
 
