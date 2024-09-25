@@ -65,9 +65,10 @@
     </div>
 
 
-    <!-- Seletor de DB e Campo de Busca  -->
+    <!-- Seletor de DB e Campo de Busca -->
     <div class="row mt-4">
-        <div class="col-md-6 d-flex justify-content-center align-items-center">
+        <!-- Seletor de DB -->
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
             <div>
                 <label for="dbSelector" class="form-label">Selecione a DB:</label>
                 <select id="dbSelector" class="form-select w-100">
@@ -83,24 +84,47 @@
             </div>
         </div>
 
-        <!-- Campo de busca centralizado -->
-        <div class="col-md-6 d-flex justify-content-right align-items-right">
+        <!-- Campo de busca -->
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
             <div>
                 <label for="searchInput" class="form-label">Buscar por palavra:</label>
                 <input type="text" id="searchInput" class="form-control w-100"
                     placeholder="Digite uma palavra para buscar...">
             </div>
+        </div>
 
+        <!-- Filtro de Classe -->
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <div>
+                <label for="filterClass" class="form-label">Filtrar por Classe:</label>
+                <select id="filterClass" class="form-select w-100">
+                    <option value="all">Todas as perguntas</option>
+                    <option value="classe">Perguntas sobre Classes</option>
+                    <option value="distincao">Perguntas sobre Distinções</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Filtro de Sistema -->
+        <div class="col-md-3 d-flex justify-content-center align-items-center">
+            <div>
+                <label for="filterSistema" class="form-label">Filtrar por Sistema:</label>
+                <select id="filterSistema" class="form-select w-100">
+                    <option value="all">Todas as perguntas</option>
+                    <option value="Tormenta20">Perguntas sobre Tormenta20</option>
+                    <option value="Ordem">Perguntas sobre Ordem Paranormal</option>
+                    <option value="3DeT">Perguntas sobre Ordem 3D&T</option>
+                </select>
+            </div>
         </div>
     </div>
-
 
 
 
     <!-- Conteúdo DB 207 -->
     <div id="db207" class="container mt-4">
         <h4>DB 207</h4>
-        <div class="searchable">
+        <div class="searchable distincao Tormenta20">
             <p><strong>Excelentíssimos ministros do STR, por favor esclareçam uma dúvida que limita meu conhecimento.
                     Com o grande sucesso da campanha Tormenta 25 Anos, iremos receber uma enxurrada de distinções.
                     Considerando que a admissão em uma distinção não exige gasto de recursos limitados (como poderes ou
@@ -471,7 +495,7 @@
     <div id="db205" class="container mt-4">
         <h4>DB 205</h4>
 
-        <div class="searchable">
+        <div class="searchable classe">
             <p><strong>Excelentíssimos! Gostariam de esclarecimentos sobre o poder Supernova, da classe Místico,
                     introduzido na DB 199. Pelo que entendi, esse poder permite a um Místico com Afinidade (fogo)
                     adicionar 1d12 de dano para cada 5 PVs gastos em qualquer magia que cause dano de fogo SEM QUALQUER
@@ -1406,6 +1430,8 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+
+        // exibir revistas
         document.getElementById('dbSelector').addEventListener('change', function () {
             var selectedDB = this.value;
             if (selectedDB === 'all') {
@@ -1428,9 +1454,7 @@
             }
         });
 
-
-        <!-- Script de busca -->
-
+        // buscador por palavra
         document.getElementById('searchInput').addEventListener('input', function () {
             let filter = this.value.toLowerCase();
             let elements = document.querySelectorAll('.searchable');
@@ -1444,6 +1468,7 @@
             });
         });
 
+        // checkbox pré JdA
         const checkbox = document.getElementById('check');
         const palavraMarcada = document.getElementById('palavra-marcada');
 
@@ -1454,6 +1479,41 @@
                 palavraMarcada.style.display = 'block'; // Exibir conteúdo
             }
         });
+
+        // filtro por seleção
+        document.getElementById('filterClass').addEventListener('change', function () {
+            var value = this.value;
+            var elements = document.querySelectorAll('.searchable');
+
+            elements.forEach(function (el) {
+                if (value === 'all') {
+                    el.style.display = ''; // Exibe todas as perguntas
+                } else if (el.classList.contains(value)) {
+                    el.style.display = ''; // Exibe apenas perguntas com a classe "classe"
+                } else {
+                    el.style.display = 'none'; // Oculta as outras perguntas
+                }
+            });
+        });
+
+
+        // filtro por sistema
+        document.getElementById('filterSistema').addEventListener('change', function () {
+            var value = this.value;
+            var elements = document.querySelectorAll('.searchable');
+
+            elements.forEach(function (el) {
+                if (value === 'all') {
+                    el.style.display = ''; // Exibe todas as perguntas
+                } else if (el.classList.contains(value)) {
+                    el.style.display = ''; // Exibe apenas perguntas com a classe "classe"
+                } else {
+                    el.style.display = 'none'; // Oculta as outras perguntas
+                }
+            });
+        });
+
+
 
     </script>
 </body>
