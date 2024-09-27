@@ -47,6 +47,26 @@
             margin: 0 auto;
             /* Centralizando o seletor */
         }
+
+        /* Estilo para o botão flutuante */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            display: none;
+            /* Inicialmente oculto */
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        #backToTop:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
@@ -56,6 +76,9 @@
         <h1>STR</h1>
         <p>Supremo Tribunal Regreiro</p>
     </div>
+
+    <!-- Botão Flutuante -->
+    <button id="backToTop" title="Voltar ao topo">↑</button>
 
     <!-- Botão checkbox -->
     <div class="d-flex justify-content-center mt-4">
@@ -1937,7 +1960,20 @@
             });
         });
 
+        // Exibir o botão quando a página for rolada
+        window.onscroll = function () {
+            const button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
 
+        // Função para rolar até o topo quando o botão for clicado
+        document.getElementById("backToTop").onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
 
     </script>
 </body>
