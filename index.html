@@ -67,6 +67,21 @@
         #backToTop:hover {
             background-color: #0056b3;
         }
+
+        #sticky-text {
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: white;
+            /* Para evitar sobreposição de conteúdo */
+            z-index: 1000;
+            /* Garante que o texto ficará acima de outros conteúdos */
+            padding: 10px;
+            /* Opcional: adicionar algum espaçamento interno */
+            border-bottom: 1px solid #ccc;
+            /* Opcional: adicionar uma linha inferior */
+        }
     </style>
 </head>
 
@@ -94,36 +109,10 @@
         <div class="col-md-3 d-flex justify-content-center align-items-center">
             <div>
                 <label for="dbSelector" class="form-label">Selecione a DB:</label>
-                <select id="dbSelector" class="form-select w-100">
-                    <option value="all">Todos</option>
-                    <option value="db207">DB 207 (Set/24)</option>
-                    <option value="db206">DB 206 (Ago/24)</option>
-                    <option value="db205">DB 205 (Jul/24)</option>
-                    <option value="db204">DB 204 (Jun/24)</option>
-                    <option value="db203">DB 203 (Mai/24)</option>
-                    <option value="db202">DB 202 (Abr/24)</option>
-                    <option value="db201">DB 201 (Mar/24)</option>
-                    <option value="db200">DB 200 (Fev/24)</option>
-                    <option value="db199">DB 199 (Jan/24)</option>
-                    <option value="db198">DB 198 (Dez/23)</option>
-                    <option value="db197">DB 197 (Nov/23)</option>
-                    <option value="db196">DB 196 (Out/23)</option>
-                    <option value="db195">DB 195 (Set/23)</option>
-                    <option value="db194">DB 194 (Ago/23)</option>
-                    <option value="db193">DB 193 (Jul/23)</option>
-                    <option value="db192">DB 192 (Jun/23)</option>
-                    <option value="db191">DB 191 (Mai/23)</option>
-                    <option value="db190">DB 190 (Abr/23)</option>
-                    <option value="db189">DB 189 (Mar/23)</option>
-                    <option value="db188">DB 188 (Fev/23)</option>
-                    <option value="db187">DB 187 (Jan/23)</option>
-                    <option value="db186">DB 186 (Dez/22)</option>
-                    <option value="db185">DB 185 (Nov/22)</option>
-                    <option value="db179">DB 179 (Nov/22)</option>
-                    <option value="db178">DB 178 (Out/22)</option>
-                </select>
+                <select id="dbSelector" class="form-select w-100"></select>
             </div>
         </div>
+
 
 
 
@@ -1015,7 +1004,7 @@
                     quebre suas obrigações e restrições?<br>
                     2) Um druida na forma selvagem, com o poder Magia Natural, pode usar catalisadores carregados pelo
                     personagem? E se estiver utilizando a bandoleira de poções?</strong></p>
-            <p><em>Cons. Bruno Emerson</p>
+            <p><em>Cons. Bruno Emerson</p></em>
             <p>Saudações selvagens, conselheiro! Vamos às suas respostas:<br>
                 1) Sim, sem problema.<br>
                 2) Quando um druida assume uma forma selvagem seus itens se fundem ao seu corpo. Entretanto, o poder
@@ -4217,9 +4206,315 @@
 
     </div>
 
+    <!-- Conteúdo DB 184 -->
+    <div id="db184" class="container mt-4">
+
+        <h4>DB 184</h4>
+
+        <div class="searchable Tormenta classes">
+            <p><strong>Um bardo que tenha Foco em Perícia (Atuação) e Esgrima Mágica, pode rolar dois dados para
+                    atacar quando estiver sob Inspiração?
+                </strong></p>
+            <p><em>— Cons. Daniel Weiss</em></p>
+            <p>Atuadíssimo senhor Weiss, a resposta é sim! Foco em Perícia não impede interação com ataques, apenas
+                com a perícia Luta. Como o bardo realiza seus ataques com a perícia Atuação, pode tirar proveito de
+                Foco em Perícia para seus testes de ataque enquanto estiver sob efeito de Inspiração.
+            </p>
+            <hr>
+        </div>
+
+        <div class="searchable Tormenta regras combate">
+            <p><strong>1) A quem se aplica o poder atraente? Qualquer membro de uma raça similar ou depende da
+                    inclinação sexual do alvo? Como determinar se são raças similares o suficiente? Se for o segundo
+                    caso, como vocês aconselham a fazer essa definição? <br>
+                    2) Os usos de Intimidação como efeito de medo foram planejados para serem usados em combate?
+                    Meus jogadores estão usando como uma espécie de stun para impedir os inimigos de atacar,
+                    forçando o inimigo a fugir e atacando ele no processo, em um quase eterno loop. Essa é a ideia?
+                </strong></p>
+            <p><em>— Cons. Estevão Costa</em></p>
+            <p>Socialíssimo senhor Costa, suas perguntas são intrigantes! <br>
+                1) A questão de atratividade depende muito da identidade, da orientação sexual e da expressão de
+                gênero de ambas as criaturas envolvidas. Esse é um assunto tão amplo que na vida real estamos
+                somente arranhando a superfície de como acontece. Dessa forma, seria pouco fortuito
+                determinar uma regra rígida para essa situação. Cada caso deve ser julgado individualmente, ficando
+                principalmente a critério do mestre. Entretanto, tenha em mente que para efeitos deste poder, a
+                criatura não precisa necessariamente se sentir atraída; basta que sua combinação de orientação
+                sexual e expressão de gênero seja compatível com as do personagem. <br>
+                2) Sim, essa perícia pode ser usada em combate. Perceba, porém, que o uso de intimidação para
+                assustar não é cumulativo. E mesmo que o NPC fique apavorado, a errata nesta condição não
+                força mais a vítima a fugir.
+            </p>
+            <hr>
+        </div>
+
+        <div class="searchable Tormenta classes racas itens">
+            <p><strong>Excelentíssimos juízes do STR, que Valkaria lhes dê força para continuar desbravando o
+                    infinito mundo de possibilidades do RPG (e do mundo real também)! <br>
+                    1) Devotos ou Devotos Fiéis podem trocar seus Poderes de Classe por mais Poderes Concedidos de
+                    suas divindades, como fazem com os demais Poderes Gerais? E os exclusivos de Origem, podem ser
+                    pegos depois de terminada a ficha (tipo, ao alcançar o nível 2)? <br>
+                    2) Um personagem treinado em Ofício (Cozinheiro) conhece todas as receitas do livro (e das DBs)?
+                    Na DB153 (p. 44), a matéria “Culinária Fantástica” tinha vários pratos e dizia “Um personagem
+                    treinado sabe um número de receitas igual ao seu bônus de Inteligência (mínimo 1)”. No entanto,
+                    boa parte daquilo (receitas e regras) não foi para o “Livro Básico” ou para o “Jogo do Ano”.
+                    <br>
+                    3) Há previsão para o lançamento de mais pratos (tal como a Paella Negra e os da coluna Sal &
+                    Tormenta)? A dúvida é inspirada no almoço, tema recorrente na vida dos meus personagens hynnes
+                    (aliás, sonho ver mais materiais a respeito do fim de Hongari um dia). <br>
+                    4) De acordo com a nova descrição de “Criatura Artificial” (p. 27 do Jogo do Ano), o golem “não
+                    se beneficia de cura mundana”. Isso quer dizer que curas mágicas, como “Curar Ferimentos” pode
+                    curá-los?
+                </strong></p>
+            <p><em>— Cons. Cesar Henrique</em></p>
+            <p>Variadíssinho senhor Henrique, trazemos suas respostas em tópicos! <br>
+                1) Poderes Concedidos podem ser escolhidos ao longo dos níveis. Os poderes específicos de cada
+                origem, porém, não podem. <br>
+                2) A quantidade de receitas conhecidas não é regida por nenhuma regra, oficialmente. Porém, isso não
+                quer dizer que qualquer cozinheiro pode saber qualquer prato. Cabe ao mestre a decisão final,
+                podendo se valer da pergunta “como você sabe fazer X?” para construir esse elemento narrativo. <br>
+                3) Novos pratos estão nos nossos planos, mas ainda não podemos afirmar com certeza quando serão
+                lançados. <br>
+                4) Sim.
+            </p>
+            <hr>
+        </div>
+
+        <div class="searchable Tormenta classes">
+            <p><strong>1) No uso de Corrida na perícia Atletismo (pág. 115) esbarrei com um “fenômeno” um tanto
+                    interessante acerca da magia Primor Atlético em interação com este uso da perícia. Quando um
+                    personagem utiliza a magia Primor Atlético, este ganha +9m de deslocamento e +10 de Atletismo,
+                    o que em termos de bônus para usos de correr, desconsiderando qualquer bônus que o personagem
+                    já tenha, este teria, somente pela magia,+22 na perícia para correr. A minha dúvida é se meu
+                    raciocínio está equivocado, ou não. Minha pergunta vem por conta do robusto +22 que a magia confere,
+                    mesmo que circunstancial. <br>
+                    2) Dúvida sobre Poder Concedido: o possível bônus de Constituição conferido pelo poder Poder Oculto
+                    (pág 134), aumenta os PVs do devoto? Ou funciona como a magia Físico Divino, isto é, sem incidir no
+                    efeito supracitado. <br>
+                    3) Dados de dano adicional conferido por itens esotéricos em magias que têm efeito contínuo, como a
+                    magia Enxame de Pestes, são adicionados por toda a duração da magia? Ou apenas, na primeira rolagem
+                    de dano?
+                </strong></p>
+            <p><em>— Cons. Francisco José Marques</em></p>
+            <p>Friganeídeo senhor Marques, vamos às respostas! <br>
+                1) Está correto. Ambos os bônus são recebidos para correr. <br>
+                2) Aumenta. Mas esses pontos são perdidos quando o efeito acaba. Que Nimb o proteja. <br>
+                3) Apenas na primeira rolagem.
+            </p>
+            <hr>
+        </div>
+
+        <div class="searchable Tormenta classes">
+            <p><strong>Bom Azgher, Meritíssimos. <br>
+                    1) Um clérigo poderia “abandonar” seu deus e virar um clérigo do Panteão? Teria alguma implicação
+                    maior, ou somente uma Penitência resolve? <br>
+                    2) As magias divinas, depois de “concedidas” ou “ensinadas” pelo deus, são parte intrínseca do
+                    clérigo ou podem ser retiradas? <br>
+                    3) Um deus menor pode ter clérigos normalmente?
+                </strong></p>
+            <p><em>— Cons. Pablo Pochmann</em></p>
+            <p>1) Essa questão depende muito do julgamento do mestre, da divindade em questão e da situação que levou
+                à perda da fé. Na maior parte dos casos, porém, uma Penitência deve ser o bastante. <br>
+                2) Elas são parte do devoto, mas a vida também é e qualquer bandido com uma besta pode tomá-la! Quem
+                poderia impedir uma divindade de fazer o mesmo? Sob um ponto de vista mais técnico, o poder divino emana
+                da divindade, mas a habilidade de manipulá-lo para obter efeitos mágicos vem do clérigo. <br>
+                3) Sim.
+            </p>
+            <hr>
+        </div>
+
+        <div class="searchable Tormenta classes">
+            <p><strong>Venho através deste inquérito trazer à tona uma possibilidade sobre a classe de Dobrador
+                    pertencente ao Almanaque Dragão Brasil. <br>
+                    Tendo em vista que é uma classe que se vangloria de ataques feitos da dobra, não é mais interessante
+                    ataques feitos com a técnica elemental serem usados com essa perícia (Dobra) em vez de Luta?
+                </strong></p>
+            <p><em>— Cons. Aguiar Bryan</em></p>
+            <p>Avartístico senhor Bryan, a classe Dobrador representa não apenas domínio de técnica elemental como
+                também prática de artes marciais. Por esse motivo, o uso ofensivo padrão da dobra é regido pela perícia
+                Luta.
+            </p>
+            <hr>
+        </div>
+
+    </div>
+
+    <h4 id="sticky-text" style="text-align: center;">As respostas abaixo são do conteúdo pré Jogo do Ano. Muitas delas
+        podem estar desatualizadas, é necessário confirmar se não houve mudança de regras para as mesmas</h4>
+
+
 
     <!-- Conteúdo Pré Jogo do Ano -->
     <div id="palavra-marcada">
+
+        <!-- Conteúdo DB 183 -->
+        <div id="db183" class="container mt-4">
+
+            <h4>DB 183</h4>
+
+            <div class="searchable Tormenta magias">
+                <p><strong>Excelentíssimos Senhores Ministros deste tribunal, Gostaria que os senhores esclarecessem uma
+                        dúvida sobre exatamente como a condição cego interage com conjuradores. A condição diz o
+                        seguinte: o personagem fica desprevenido e lento, não pode fazer testes de percepção para
+                        observar e sofre -5 em testes de perícias baseadas em Força e Destreza. Todos os alvos de
+                        seus ataques recebem camuflagem total. Condição de sentidos. Minhas dúvidas são: <br>
+                        1. Isso seria considerado uma condição ruim para conjuração? <br>
+                        2. O conjurador pode fazer um teste de percepção para localizar o alvo, ele deveria gastar uma
+                        ação padrão para tal, ou seria livre, já que ele está ativamente procurando pelo alvo? <br>
+                        3. Uma magia conjurada é um ataque para efeitos de camuflagem total? <br>
+                        Obrigado pela atenção.
+                    </strong></p>
+                <p><em>— Cons. Matheus Machado</em></p>
+                <p>Visioníssimo Sr. Machado, essa é uma pergunta deveras interessante. Apesar de não estar explicitado
+                    que cegueira é uma condição ruim para lançar magias, ela interfere com uma regra básica de
+                    magias que consta no verbete “Alvo”: <br>
+                    <i>“<b> Alvo</b>. A magia tem um ou mais alvos, que podem ser criaturas ou objetos. Você lança a
+                        magia diretamente contra os alvos. Você deve ser capaz de perceber o alvo.” <br></i>
+                    Assim, se o conjurador não pode usar a visão para perceber seus alvos, teria que se valer de outros
+                    meios como audição, para estimar sua localização. Para isso, pode-se aplicar a regra da página 122
+                    sobre usar Percepção para Ouvir: <br>
+                    <i>“Perceber criaturas que não possam ser vistas tem CD 20, ou +10 no teste de Furtividade da
+                        criatura,
+                        o que for maior. Mesmo que você passe no teste, ainda sofre penalidades normais por
+                        lutar sem ver o inimigo.”<br></i>
+                    Se o conjurador passar no teste, percebe a criatura alvo e cumpre o requisito para lançar a magia.
+                    Note que seu mestre tem a palavra final sobre ser possível ou não perceber uma criatura ou objeto
+                    usando apenas a audição, dependendo das condições da cena. <br>
+                    Sobre sua segunda dúvida, lançar uma magia não é um ataque para efeitos de regra e, por isso, não
+                    sofre os efeitos de camuflagem. Entretanto, precisamos nos atentar à descrição de Camuflagem
+                    Total (pág. 225): <br>
+                    <i>“Você recebe camuflagem total quando um efeito impede a visão dos inimigos — por exemplo, em uma
+                        câmara em escuridão total. A chance de falha em camuflagem total é 50% (1 a 5 no d10).”<br></i>
+                    Como o efeito impede que o conjurador perceba os alvos usando a visão, ele se enquadra nas mesmas
+                    limitações citadas anteriormente.
+                </p>
+                <hr>
+            </div>
+
+            <div class="searchable Tormenta magias">
+                <p><strong>A descrição da magia Purificação diz que cura uma série de condições, mas a condição “doente”
+                        não é citada. Então a magia não cura nenhuma doença de qualquer tipo. No entanto, algumas
+                        doenças causam algumas condições que a magia Purificação pode remover. Quando a magia é lançada
+                        sobre um personagem com Calafrio Diabólico e está com a condição fraco, essa condição é
+                        removida, mas a doença não. Se o personagem falhar no próximo teste de fortitude, a doença passa
+                        para o próximo estágio, deixando o personagem na condição progressiva (no caso, debilitado)?
+                        Ou o personagem apenas volta a ficar com a condição fraco?
+                    </strong></p>
+                <p><em>— Cons. Emerson Xavier</em></p>
+                <p>Curandeiríssimo Sr. Xavier, sua interpretação está correta. Remover uma condição causada por uma
+                    doença, mas não a doença em si, é como tratar um sintoma. O doente melhora daquele sintoma em
+                    especial, mas a causa da doença não é removida de seu corpo e ele precisa fazer testes diários
+                    normalmente. <br>
+                    No caso de condições progressivas, como as de Calafrio Caótico, retroceder os sintomas pode ser
+                    considerado uma espécie de tratamento paliativo, e o personagem afetado faz seu teste considerando o
+                    estado atual de seus sintomas. Ou seja, no caso apontado, se estiver sem nenhuma condição, fica
+                    fraco novamente.
+                </p>
+                <hr>
+            </div>
+
+            <div class="searchable Tormenta magias">
+                <p><strong>Excelentíssimo corpo de magistrados do STR, escutai a minha dúvida e trazei à luz sua justa
+                        resposta! <br>
+                        Já procurei em vários lugares uma resposta direta a essa questão que vem causando um certo
+                        atrito em meu grupo, mas, sem sucesso, resolvi apelar por aqui: com a versão 1.1 do Errata &
+                        Dúvidas Frequentes ficou claro que Dissipar Magia não dissipa outras habilidades mágicas que não
+                        sejam magia (como Raio Arcano, Forma Selvagem etc). Também ficou clara a diferenciação entre os
+                        termos “anular”, “dissipar” e “suprimir” no Dúvidas Frequentes de Tormenta20 versão 1.2. No
+                        entanto, a seguinte dúvida ainda persiste: magias lançadas através de habilidades mágicas que
+                        não sejam magia (como Magia das Fadas, Luz Sagrada, Liberdade Divina, Golpe Pessoal Conjurador
+                        etc) podem ser anuladas com sua magia oposta ou Dissipar Magia? <br>
+                        Desde já agradeço a atenção e a paciência!
+                    </strong></p>
+                <p><em>— Cons. Marco Túlio Braga</em></p>
+                <p>Magicíssimo Sr. Braga, essa é uma dúvida facilmente esclarecida através da semântica: se uma
+                    habilidade permite que o personagem lance uma (ou mais) magias, ele ainda está lançando uma magia!
+                    <br>
+                    Pela regra, todas as magias são habilidades mágicas, incluindo a habilidade “Magias” que as classes
+                    conjuradoras recebem. Magias são uma subdivisão especial de habilidades mágicas, e “lançar magias” é
+                    um conjunto de regras de jogo separado com suas próprias características e peculiaridades, que rege
+                    a maneira como as magias interagem com o sistema. <br>
+                    <i>Dissipar Magia</i> é uma habilidade que dissipa qualquer magia, independentemente de sua
+                    habilidade
+                    fonte. Ela não funciona apenas contra habilidades mágicas que não são magias, como Golpe Elemental e
+                    Símbolo Sagrado Abençoado.
+                </p>
+                <hr>
+            </div>
+
+            <div class="searchable Tormenta magias">
+                <p><strong>Sobre a nova Runa de Proteção: quando você usa o aprimoramento de colocar uma tatuagem em si
+                        mesmo, é possível armazenar qualquer magia nela ou apenas magias que tenham você como alvo? Por
+                        exemplo, um arcanista poderia colocar uma Bola de Fogo na runa que tem o seguinte gatilho
+                        “quando meu amigo golem de fogo sofrer dano, vou jogar a Bola de Fogo nele”?
+                    </strong></p>
+                <p><em>— Cons. Julio Cesar</em></p>
+                <p>Preparadíssimo Sr. Cesar, a regra não especifica que a magia armazenada na runa precisa ter alcance
+                    pessoal ou “você” como alvo, portanto esses requisitos não existem. <br>
+                    A magia e gatilho de seu exemplo estão dentro dos parâmetros aceitos, mas é preciso lembrar que você
+                    efetivamente lança a magia, e ainda precisa respeitar suas limitações como alcance, alvo e linha de
+                    efeito. Por exemplo, não seria possível ter seu amigo golem como alvo, caso ele esteja fora do
+                    alcance da magia, atrás de uma barreira ou dentro de uma área de escuridão.
+                </p>
+                <hr>
+            </div>
+
+            <div class="searchable Tormenta distincao regras ">
+                <p><strong>Bom dia, tarde ou noite amigos regreiros. <br>
+                        Gostaria de tirar uma dúvida referente ao vigilante mascarado, do arquivo de Distinções
+                        recentemente disponibilizado. <br>
+                        O poder Cavaleiro das Trevas exige como pré-requisito, que o personagem tenha a habilidade
+                        “Ataque Furtivo”. Na pág. 253 do PDF, o Aliado Assassino diz que “Iniciante: você recebe a
+                        habilidade Ataque Furtivo”. <br>
+                        Minha dúvida é: habilidades provenientes de aliados permanentes, ou seja, que você tenha
+                        conseguido a partir de poderes de classe como Companheiro Animal ou Autômato, servem para fins
+                        de pré-requisitos como esse? <br>
+                        Pela regra escrita, entendo que sim, pois em nenhum lugar do livro me recordo de uma distinção
+                        sobre habilidades vindas de aliados não serem consideradas suas, além de ser a solução mais
+                        simples. Tematicamente também faria sentido, pois heróis vigilantes constantemente têm sidekicks
+                        os auxiliando em sua luta contra o crime. <br>
+                        Mas gostaria de uma confirmação se isso realmente funciona e se é a intenção. <br>
+                        Obrigado desde já!
+                    </strong></p>
+                <p><em>— Cons. Gabriel Moreira</em></p>
+                <p>Companheiríssimo Sr. Moreira, sua intenção é nobre, mas infelizmente não condiz com a intenção nem a
+                    descrição das regras de pré-requisitos (pág. 33): <br>
+                    <i></i>“Alguns poderes têm pré-requisitos. Para escolhê-los e usá-los, você deve cumprir todas as
+                    exigências mencionadas.” </i>
+                    Enfatizei a palavra “você” porque, apesar de parecer simples, é o termo crucial para esse
+                    esclarecimento: a regra diz que seu personagem, individualmente, precisa cumprir os pré-requisitos
+                    e, apesar de serem habilidades de classe, aliados não são exatamente “permanentes” e podem ser
+                    perdidos ao longo da aventura. <br>
+                    Consultando o Ministro Guilherme Dei Svaldi, ele nos agraciou com uma pequena adição que virá na
+                    revisão das regras para deixar esse tipo de interação mais clara: <br>
+                    “Habilidades fornecidas por fontes externas ao personagem (como itens ou aliados) não contam para
+                    propósitos de pré-requisitos.”
+                </p>
+                <hr>
+            </div>
+
+            <div class="searchable Tormenta distincao regras ">
+                <p><strong>Olá novamente, guardiões supremos da lei! <br>
+                        Pergunta de uma amigo elfo arcanista caolho chamado Dranehel Tur-Istar: <br>
+                        “Vamos supor que eu lance uma magia, Desintegrar, por exemplo, e um inimigo utilize sua
+                        Contramágica aprimorada para lançar um outro Desintegrar, no intuito de anular minha
+                        magia. Caso eu possua um item Refletor, poderia refletir o Desintegrar do inimigo de volta para
+                        ele, fazendo-o sofrer, assim, a magia duas vezes?”
+                    </strong></p>
+                <p><em>— Cons. Pablo Pochmann</em></p>
+                <p>Refletíssimo Sr. Pochmann, apesar de engenhoso, seu plano não é coberto pelas regras. Primeiro,
+                    precisamos deixar claro que a ação de Contramágica anula o lançamento da magia, ou seja, as magias
+                    utilizadas não são sequer lançadas pelos envolvidos! Isso fica claro no último parágrafo do quadro
+                    “Anulando Magias” (pág. 164): <br>
+                    <i></i>“Tanto a magia anulada quanto a magia usada como contramágica se dissipam automaticamente,
+                    sem efeito algum.”</i><br>
+                    Uma vez que a magia não causa nenhum efeito, ela não interage com nenhum outro efeito, como o de
+                    item refletor, uma vez que não há nada para ser refletido.
+                </p>
+                <hr>
+            </div>
+
+
+        </div>
 
 
         <!-- Conteúdo DB 179 -->
@@ -4800,12 +5095,62 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
+        const dbOptions = [
+            { id: 'db207', label: 'DB 207 (Set/24)' },
+            { id: 'db206', label: 'DB 206 (Ago/24)' },
+            { id: 'db205', label: 'DB 205 (Jul/24)' },
+            { id: 'db204', label: 'DB 204 (Jun/24)' },
+            { id: 'db203', label: 'DB 203 (Mai/24)' },
+            { id: 'db202', label: 'DB 202 (Abr/24)' },
+            { id: 'db201', label: 'DB 201 (Mar/24)' },
+            { id: 'db200', label: 'DB 200 (Fev/24)' },
+            { id: 'db199', label: 'DB 199 (Jan/24)' },
+            { id: 'db198', label: 'DB 198 (Dez/23)' },
+            { id: 'db197', label: 'DB 197 (Nov/23)' },
+            { id: 'db196', label: 'DB 196 (Out/23)' },
+            { id: 'db195', label: 'DB 195 (Set/23)' },
+            { id: 'db194', label: 'DB 194 (Ago/23)' },
+            { id: 'db193', label: 'DB 193 (Jul/23)' },
+            { id: 'db192', label: 'DB 192 (Jun/23)' },
+            { id: 'db191', label: 'DB 191 (Mai/23)' },
+            { id: 'db190', label: 'DB 190 (Abr/23)' },
+            { id: 'db189', label: 'DB 189 (Mar/23)' },
+            { id: 'db188', label: 'DB 188 (Fev/23)' },
+            { id: 'db187', label: 'DB 187 (Jan/23)' },
+            { id: 'db186', label: 'DB 186 (Dez/22)' },
+            { id: 'db185', label: 'DB 185 (Nov/22)' },
+            { id: 'db184', label: 'DB 184 (Out/22)' },
+            { id: 'db183', label: 'DB 183 (Set/22)' },
+            { id: 'db182', label: 'DB 182 (Ago/22)' },
+            { id: 'db181', label: 'DB 181 (Jul/22)' },
+            { id: 'db180', label: 'DB 180 (Jun/22)' },
+            { id: 'db179', label: 'DB 179 (Mai/22)' },
+            { id: 'db178', label: 'DB 178 (Abr/22)' }
+        ];
+
+        const dbSelector = document.getElementById('dbSelector');
+
+        // Adicionar opção 'Todos' no início
+        const allOption = document.createElement('option');
+        allOption.value = 'all';
+        allOption.textContent = 'Todos';
+        dbSelector.appendChild(allOption);
+
+        // Gerar as outras opções
+        dbOptions.forEach(db => {
+            const option = document.createElement('option');
+            option.value = db.id;
+            option.textContent = db.label;
+            dbSelector.appendChild(option);
+        });
+
+
         // exibir revistas
         document.getElementById('dbSelector').addEventListener('change', function () {
             var selectedDB = this.value;
             var dbElements = ['db207', 'db206', 'db205', 'db204', 'db203', 'db202', 'db201', 'db200', 'db199',
                 'db198', 'db197', 'db196', 'db195', 'db194', 'db193', 'db192', 'db191', 'db190', 'db189',
-                'db188', 'db187', 'db186', 'db185', 'db179', 'db178'];
+                'db188', 'db187', 'db186', 'db185', 'db184', 'db183', 'db179', 'db178'];
 
             dbElements.forEach(function (db) {
                 document.getElementById(db).style.display = (selectedDB === 'all' || db === selectedDB) ? 'block' : 'none';
