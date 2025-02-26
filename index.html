@@ -157,6 +157,67 @@
         </div>
     </div>
 
+    <!-- Conteúdo DB 212 -->
+    <div id="db211" class="container mt-4">
+        <h4>DB 212</h4>
+        <div class="searchable Tormenta20 equipamento regras">
+            <p><strong>Saudações, senhores do STR! <br>
+                Busco orientações quanto ao poder Tradição de Lin-wu. A descrição do poder concedido cita apenas a katana como arma base; seria um desequilíbrio absurdo adicio-
+nar wakizashi? Afinal, esta arma foi publicada depois e também está relacionada ao deus.
+                </strong></p>
+            <p><em>— Cons. Mauro T</em></p>
+            <p>Saudações tradicionais, conselheiro! A katana é mais central à tradição do Deus da Honra, sendo por isso a única arma contemplada pelo poder. Ao seu critério, porém, você
+pode permitir que jogadores na sua mesa escolham entre katana e wakizashi para ser beneficiada pelo poder — especialmente caso já tenham proficiência com uma das
+armas obtida de outra fonte.
+                </p>
+            <hr>
+        </div>
+
+        <div class="searchable Tormenta20 regras combate">
+            <p><strong>Excelentíssimo julgadores, como faço para determinar se uma investida é feita em linha reta em um mapa de batalha?
+                </strong></p>
+            <p><em>— Cons. guimalves</em></p>
+            <p>Saudações retilíneas, conselheiro! Há duas escolas de arbitragem nesse caso. Na primeira, mais rígida, linha reta precisa ser representada diretamente nos quadrados
+do mapa de batalha. Dessa forma, apenas se movendo nas quatro direções retas e em suas diagonais intermediárias um personagem poderia fazer uma investida. Na segunda, basta traçar uma linha reta entre
+o personagem e seu alvo. Na prática há menos diferenças práticas entre essas duas abordagens do que parece e o mestre é livre para adotar qualquer uma delas.
+                </p>
+            <hr>
+        </div>
+
+        <div class="searchable Tormenta20 regras">
+            <p><strong>Olá! Bom dia, boa tarde ou boa noite, digníssimos conselheiros e excelentíssimos juízes. Redução de dano se aplica a cada fonte de dano ou de uma única vez? Por
+            exemplo, um golem inevitável paladino, usando uma espada longa flamejante, ataca um inimigo marcado como culpado com RD 5. Existe o dano cortante da arma,
+            o dano adicional por flamejante e dano de luz pela declaração de culpado. Cada uma dessas formas de dano é diminuída em cinco pontos ou o dano é somado primeiro
+            e depois cinco é subtraído de seu total? <br>
+            Digamos que, na mesma situação, o alvo também tenha redução de fogo 10. Ele reduz 5 pontos de dano de cada fonte e depois diminui o dano de fogo restante em 10? <br>
+            Desde já agradeço por lerem essa humilde súplica!
+                </strong></p>
+            <p><em>— Cons. Jtinha</em></p>
+            <p>Saudações implacáveis, conselheiro! Redução de dano se aplica a todo o dano, ou seja, é aplicada depois de todo o dano ser somado. Redução de fogo, mais específica,
+se aplica antes ao dano de fogo. Ou seja, primeiro subtraia redução de fogo e depois subtraia RD do dano restante.
+                 </p>
+            <hr>
+        </div>
+
+         <div class="searchable Tormenta20 regras">
+            <p><strong>Boa escuridão, artonianos! Venho aqui, humildemente, certificar a funcionalidade do combo de Koug-Hart, osteon franco-atirador abençoado por Tenebra! Com os poderes
+Ataque Extra, Saque Rápido, Emboscar e Velocidade Ladina, posso atirar três vezes e recarregar duas vezes?
+                </strong></p>
+            <p><em>— Cons. Bruno Bittencourt Oliveira</em></p>
+            <p>Saudações sacramentadíssimas, conselheiro! A resposta é... quase. Se tem Saque Rápido, Koug-Hart pode usar ações de movimento para recarregar armas de disparo que
+normalmente exigem ações padrão (como pistolas e mosquetes). Isso permite usar uma ação para atirar, sua ação de movimento para recarregar, a ação padrão de Emboscar (se
+for o primeiro turno) para atirar mais uma vez e por fim Velocidade Ladina para recarregar a arma. O terceiro tiro não é possível, já que Ataque Extra concede dois ataques como
+parte da mesma ação agredir; ao usar uma ação de movimento para recarregar, sua ação agredir já terá passado. Apenas ações livres e reações acontecem durante uma ação.
+Ele poderia fazer um terceiro ataque caso usasse duas pistolas, e tivesse o poder Surto  Heroico para conseguir uma terceira ação padrão ou carregasse cartuchos de papel
+(Dragão Brasil 189) para recarregar sua arma como ação livre.
+                 </p>
+            <hr>
+        </div>
+        
+    </div>    
+    
+        
+
     <!-- Conteúdo DB 211 -->
     <div id="db211" class="container mt-4">
         <h4>DB 211</h4>
@@ -7329,8 +7390,7 @@
             </p>
             <hr>
         </div>
-        <p>Este conteúdo é um material gratuito não-oficial, feito por fãs, sem orientação ou aprovação da
-            Jambo Editora
+        <p>Este conteúdo é um material gratuito não-oficial, feito por fãs, sem orientação ou aprovação da Jambo Editora
         </p>
     </div>
 
@@ -7339,6 +7399,7 @@
     <script>
 
         const dbOptions = [
+            { id: 'db212', label: 'DB 212 (Fev/25)' },
             { id: 'db211', label: 'DB 211 (Jan/25)' },
             { id: 'db210', label: 'DB 210 (Dez/24)' },
             { id: 'db209', label: 'DB 209 (Nov/24)' },
@@ -7395,7 +7456,7 @@
         // exibir revistas
         document.getElementById('dbSelector').addEventListener('change', function () {
             var selectedDB = this.value;
-            var dbElements = ['db211', 'db210', 'db209', 'db208', 'db207', 'db206', 'db205', 'db204', 'db203', 'db202', 'db201', 'db200', 'db199',
+            var dbElements = ['db212','db211', 'db210', 'db209', 'db208', 'db207', 'db206', 'db205', 'db204', 'db203', 'db202', 'db201', 'db200', 'db199',
                 'db198', 'db197', 'db196', 'db195', 'db194', 'db193', 'db192', 'db191', 'db190', 'db189',
                 'db188', 'db187', 'db186', 'db185', 'db184', 'db183', 'db182', 'db181', 'db180', 'db179', 'db178'];
 
