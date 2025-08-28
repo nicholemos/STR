@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const jdaCheckbox = document.getElementById('check');
 
     const dbOptions = [
+        { id: 'db218', label: 'DB 218 (Ago/25)' },
         { id: 'db217', label: 'DB 217 (Jul/25)' },
         { id: 'db216', label: 'DB 216 (Jun/25)' },
         { id: 'db215', label: 'DB 215 (Mai/25)' },
