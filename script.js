@@ -1,10 +1,30 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+    const contentArea = document.getElementById('content-area');
+
+    // Carrega a "database" separada do index (editions + articles)
+    try {
+        const response = await fetch('database.html', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`Falha ao carregar database.html (HTTP ${response.status})`);
+        const html = await response.text();
+        contentArea.innerHTML = html;
+    } catch (err) {
+        console.error(err);
+        contentArea.innerHTML = `
+            <div id="sticky-text">
+                Não foi possível carregar a database.<br>
+                Confirme se o arquivo <strong>database.html</strong> está na mesma pasta do site e se você está abrindo o site via servidor (http/https).
+            </div>
+        `;
+        return;
+    }
+
     // --- LÓGICA DO ACORDEÃO (EXPANDIR/FECHAR) ---
     const editions = document.querySelectorAll('.edition');
 
-    // Função para abrir um acordeão
     function openAccordion(edition) {
         const content = edition.querySelector('.edition-content');
+        if (!content) return;
+
         if (!edition.classList.contains('active')) {
             edition.classList.add('active');
             content.style.maxHeight = content.scrollHeight + "px";
@@ -12,9 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Função para fechar um acordeão
     function closeAccordion(edition) {
         const content = edition.querySelector('.edition-content');
+        if (!content) return;
+
         if (edition.classList.contains('active')) {
             edition.classList.remove('active');
             content.style.maxHeight = null;
@@ -22,9 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Adiciona o evento de clique para expandir/fechar manualmente
     editions.forEach(edition => {
         const title = edition.querySelector('.edition-title');
+        if (!title) return;
+
         title.addEventListener('click', () => {
             if (edition.classList.contains('active')) {
                 closeAccordion(edition);
@@ -35,84 +57,45 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // --- LÓGICA DOS FILTROS ---
-
     const dbSelector = document.getElementById('dbSelector');
     const searchInput = document.getElementById('searchInput');
     const filterClass = document.getElementById('filterClass');
     const filterSistema = document.getElementById('filterSistema');
     const jdaCheckbox = document.getElementById('check');
 
-    const dbOptions = [
-        { id: 'db222', label: 'DB 222 (Dez/25)' },
-        { id: 'db221', label: 'DB 221 (Nov/25)' },
-        { id: 'db220', label: 'DB 220 (Out/25)' },
-        { id: 'db219', label: 'DB 219 (Set/25)' },
-        { id: 'db218', label: 'DB 218 (Ago/25)' },
-        { id: 'db217', label: 'DB 217 (Jul/25)' },
-        { id: 'db216', label: 'DB 216 (Jun/25)' },
-        { id: 'db215', label: 'DB 215 (Mai/25)' },
-        { id: 'db214', label: 'DB 214 (Abr/25)' },
-        { id: 'db213', label: 'DB 213 (Mar/25)' },
-        { id: 'db212', label: 'DB 212 (Fev/25)' },
-        { id: 'db211', label: 'DB 211 (Jan/25)' },
-        { id: 'db210', label: 'DB 210 (Dez/24)' },
-        { id: 'db209', label: 'DB 209 (Nov/24)' },
-        { id: 'db208', label: 'DB 208 (Out/24)' },
-        { id: 'db207', label: 'DB 207 (Set/24)' },
-        { id: 'db206', label: 'DB 206 (Ago/24)' },
-        { id: 'db205', label: 'DB 205 (Jul/24)' },
-        { id: 'db204', label: 'DB 204 (Jun/24)' },
-        { id: 'db203', label: 'DB 203 (Mai/24)' },
-        { id: 'db202', label: 'DB 202 (Abr/24)' },
-        { id: 'db201', label: 'DB 201 (Mar/24)' },
-        { id: 'db200', label: 'DB 200 (Fev/24)' },
-        { id: 'db199', label: 'DB 199 (Jan/24)' },
-        { id: 'db198', label: 'DB 198 (Dez/23)' },
-        { id: 'db197', label: 'DB 197 (Nov/23)' },
-        { id: 'db196', label: 'DB 196 (Out/23)' },
-        { id: 'db195', label: 'DB 195 (Set/23)' },
-        { id: 'db194', label: 'DB 194 (Ago/23)' },
-        { id: 'db193', label: 'DB 193 (Jul/23)' },
-        { id: 'db192', label: 'DB 192 (Jun/23)' },
-        { id: 'db191', label: 'DB 191 (Mai/23)' },
-        { id: 'db190', label: 'DB 190 (Abr/23)' },
-        { id: 'db189', label: 'DB 189 (Mar/23)' },
-        { id: 'db188', label: 'DB 188 (Fev/23)' },
-        { id: 'db187', label: 'DB 187 (Jan/23)' },
-        { id: 'db186', label: 'DB 186 (Dez/22)' },
-        { id: 'db185', label: 'DB 185 (Nov/22)' },
-        { id: 'db184', label: 'DB 184 (Out/22)' },
-        { id: 'db183', label: 'DB 183 (Set/22)' },
-        { id: 'db182', label: 'DB 182 (Ago/22)' },
-        { id: 'db181', label: 'DB 181 (Jul/22)' },
-        { id: 'db180', label: 'DB 180 (Jun/22)' },
-        { id: 'db179', label: 'DB 179 (Mai/22)' },
-        { id: 'db178', label: 'DB 178 (Abr/22)' },
-    ];
+    // Monta as opções automaticamente a partir do HTML carregado (data-label)
+    const dbOptions = Array.from(editions).map(edition => {
+        const label =
+            edition.getAttribute('data-label') ||
+            edition.dataset.label ||
+            edition.querySelector('.edition-title span')?.textContent?.trim() ||
+            edition.id;
 
-    // Preenche o seletor de DBs
-    const allOption = document.createElement('option');
-    allOption.value = 'all';
-    allOption.textContent = 'Todas';
-    dbSelector.appendChild(allOption);
-    dbOptions.forEach(db => {
-        const option = document.createElement('option');
-        option.value = db.id;
-        option.textContent = db.label;
-        dbSelector.appendChild(option);
+        return { id: edition.id, label };
     });
 
-    /**
-     * Função principal que aplica todos os filtros de uma vez.
-     * Isso garante que os filtros funcionem em conjunto.
-     */
-    function applyAllFilters() {
-        const searchTerm = searchInput.value.toLowerCase();
-        const classValue = filterClass.value;
-        const systemValue = filterSistema.value;
-        const selectedDB = dbSelector.value;
+    // Preenche o seletor de DBs
+    if (dbSelector) {
+        dbSelector.innerHTML = '';
 
-        let hasVisibleResults = false;
+        const allOption = document.createElement('option');
+        allOption.value = 'all';
+        allOption.textContent = 'Todas';
+        dbSelector.appendChild(allOption);
+
+        dbOptions.forEach(db => {
+            const option = document.createElement('option');
+            option.value = db.id;
+            option.textContent = db.label;
+            dbSelector.appendChild(option);
+        });
+    }
+
+    function applyAllFilters() {
+        const searchTerm = (searchInput?.value || '').toLowerCase();
+        const classValue = filterClass?.value || 'all';
+        const systemValue = filterSistema?.value || 'all';
+        const selectedDB = dbSelector?.value || 'all';
 
         document.querySelectorAll('.edition').forEach(edition => {
             let editionHasVisibleArticle = false;
@@ -120,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // 1. Filtra por seletor de DB
             if (selectedDB !== 'all' && edition.id !== selectedDB) {
                 edition.style.display = 'none';
-                return; // Pula para a próxima edição
+                return;
             }
             edition.style.display = 'block';
 
@@ -134,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (textMatch && classMatch && systemMatch) {
                     article.style.display = '';
                     editionHasVisibleArticle = true;
-                    hasVisibleResults = true;
                 } else {
                     article.style.display = 'none';
                 }
@@ -149,29 +131,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Adiciona os eventos aos filtros para chamar a função principal
-    dbSelector.addEventListener('change', applyAllFilters);
-    searchInput.addEventListener('input', applyAllFilters);
-    filterClass.addEventListener('change', applyAllFilters);
-    filterSistema.addEventListener('change', applyAllFilters);
+    // Eventos dos filtros
+    dbSelector?.addEventListener('change', applyAllFilters);
+    searchInput?.addEventListener('input', applyAllFilters);
+    filterClass?.addEventListener('change', applyAllFilters);
+    filterSistema?.addEventListener('change', applyAllFilters);
 
     // Checkbox pré JdA (mantém sua lógica separada, pois afeta um container diferente)
-    jdaCheckbox.addEventListener('change', function () {
-        document.getElementById('palavra-marcada').style.display = this.checked ? 'none' : 'block';
+    jdaCheckbox?.addEventListener('change', function () {
+        const alvo = document.getElementById('palavra-marcada');
+        if (!alvo) return;
+        alvo.style.display = this.checked ? 'none' : 'block';
     });
-
 
     // --- Botão Voltar ao Topo ---
     const backToTopButton = document.getElementById("backToTop");
+
     window.onscroll = function () {
+        if (!backToTopButton) return;
+
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             backToTopButton.style.display = "block";
         } else {
             backToTopButton.style.display = "none";
         }
     };
-    backToTopButton.onclick = function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
 
+    if (backToTopButton) {
+        backToTopButton.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    }
 });
