@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STR - Supremo Tribunal Regreiro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
+    <title>STR — Supremo Tribunal Regreiro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>STR</h1>
-        <p>Supremo Tribunal Regreiro</p>
+    <canvas id="particleCanvas"></canvas>
+
+    <header class="header">
+        <h1 class="header-title">STR</h1>
+        <p class="header-subtitle">Supremo Tribunal Regreiro</p>
+        <div class="header-btns">
+            <a href="../index.html" class="header-home-btn" title="Hub Central"><i class="fa-solid fa-dungeon"></i> <span>Hub</span></a>
+            <!-- Theme Switcher -->
+            <div class="theme-switcher" id="theme-switcher">
+                <button class="theme-btn" data-theme="blood" title="Tema Sangue (padrão)">🩸</button>
+                <button class="theme-btn" data-theme="dark" title="Tema Sombras (STR escuro)">🌑</button>
+                <button class="theme-btn" data-theme="classic" title="Tema Clássico (STR claro)">📜</button>
+            </div>
+        </div>
     </header>
 
     <main>
         <div class="filters-container">
-            <!-- Seletor de DB -->
             <div class="filter-item">
                 <label for="dbSelector">Selecione a DB:</label>
                 <select id="dbSelector" class="filter-select"></select>
             </div>
-
-            <!-- Campo de busca -->
             <div class="filter-item">
                 <label for="searchInput">Buscar por palavra:</label>
                 <input type="text" id="searchInput" class="filter-input" placeholder="Digite para buscar...">
             </div>
-
-            <!-- Filtro de Classe -->
             <div class="filter-item">
                 <label for="filterClass">Filtrar por Tipo:</label>
                 <select id="filterClass" class="filter-select">
@@ -48,8 +49,6 @@
                     <option value="itens">Equipamentos</option>
                 </select>
             </div>
-
-            <!-- Filtro de Sistema -->
             <div class="filter-item">
                 <label for="filterSistema">Filtrar por Sistema:</label>
                 <select id="filterSistema" class="filter-select">
@@ -73,11 +72,10 @@
 
     </main>
 
-    <button id="backToTop" title="Voltar ao topo">↑</button>
+    <button id="backToTop" title="Voltar ao topo"><i class="fa-solid fa-arrow-up"></i></button>
 
     <footer>
-        <strong>O que diferencia o Supremo Tribunal Regreiro do sistema de suporte
-            tradicional?</strong><br>
+        <strong>O que diferencia o Supremo Tribunal Regreiro do sistema de suporte tradicional?</strong><br>
         <p>O <strong>Supremo Tribunal Regreiro</strong> tem a finalidade de responder dúvidas dos
             jogadores em relação ao universo de Tormenta20. Essas respostas são baseadas em fontes
             canônicas, especialmente o <strong>Livro Básico de Tormenta20</strong>, buscando esclarecer
@@ -85,12 +83,10 @@
             informadas durante suas campanhas.
         </p>
         <hr>
-        </div>
-        <p>Este conteúdo é um material gratuito não-oficial, feito por fãs, sem orientação ou aprovação da Jambo Editora
-        </p>
+        <p>Este conteúdo é um material gratuito não-oficial, feito por fãs, sem orientação ou aprovação da Jambo Editora</p>
     </footer>
 
+    <script src="database.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

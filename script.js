@@ -1,22 +1,17 @@
-document.addEventListener('DOMContentLoaded', async function () {
+document.addEventListener('DOMContentLoaded', function () {
     const contentArea = document.getElementById('content-area');
 
-    // Carrega a "database" separada do index (editions + articles)
-    try {
-        const response = await fetch('database.html', { cache: 'no-store' });
-        if (!response.ok) throw new Error(`Falha ao carregar database.html (HTTP ${response.status})`);
-        const html = await response.text();
-        contentArea.innerHTML = html;
-    } catch (err) {
-        console.error(err);
+    if (typeof DATABASE_HTML === 'undefined') {
         contentArea.innerHTML = `
             <div id="sticky-text">
-                Não foi possível carregar a database.<br>
-                Confirme se o arquivo <strong>database.html</strong> está na mesma pasta do site e se você está abrindo o site via servidor (http/https).
+                Erro: <strong>database.js</strong> não encontrado.<br>
+                Certifique-se de que o arquivo database.js está na mesma pasta.
             </div>
         `;
         return;
     }
+
+    contentArea.innerHTML = DATABASE_HTML;
 
     // --- LÓGICA DO ACORDEÃO (EXPANDIR/FECHAR) ---
     const editions = document.querySelectorAll('.edition');
@@ -162,4 +157,87 @@ document.addEventListener('DOMContentLoaded', async function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         };
     }
+
+    // ===== TEMA SANGUE/SOMBRAS/CLÁSSICO =====
+    (function initTheme() {
+        var body = document.body;
+        var key = 't20_theme';
+
+        function applyTheme(theme) {
+            body.classList.remove('theme-dark', 'theme-classic');
+            if (theme === 'dark') body.classList.add('theme-dark');
+            else if (theme === 'classic') body.classList.add('theme-classic');
+
+            document.querySelectorAll('.theme-btn').forEach(function (btn) {
+                btn.classList.toggle('active', btn.getAttribute('data-theme') === theme);
+            });
+            localStorage.setItem(key, theme);
+        }
+
+        var saved = localStorage.getItem(key);
+        if (!saved) {
+            var oldStr = localStorage.getItem('strTheme');
+            var oldHub = localStorage.getItem('hubTheme');
+            var refTheme = oldStr || oldHub;
+            if (refTheme === 'dark') saved = 'dark';
+            else if (refTheme === 'classic' || refTheme === 'light') saved = 'classic';
+            else saved = 'blood';
+        }
+
+        applyTheme(saved);
+
+        document.querySelectorAll('.theme-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                applyTheme(btn.getAttribute('data-theme'));
+            });
+        });
+    })();
+
+    // ===== PARTÍCULAS MÁGICAS =====
+    (function initParticles() {
+        const canvas = document.getElementById('particleCanvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        let w, h;
+
+        function resize() {
+            w = canvas.width = window.innerWidth;
+            h = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        const particles = [];
+        const count = 50;
+
+        for (let i = 0; i < count; i++) {
+            particles.push({
+                x: Math.random() * w,
+                y: Math.random() * h,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+                r: Math.random() * 2 + 1,
+                alpha: Math.random() * 0.5 + 0.1,
+            });
+        }
+
+        function draw() {
+            ctx.clearRect(0, 0, w, h);
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.x < 0) p.x = w;
+                if (p.x > w) p.x = 0;
+                if (p.y < 0) p.y = h;
+                if (p.y > h) p.y = 0;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 213, 79, ${p.alpha})`;
+                ctx.fill();
+            });
+            requestAnimationFrame(draw);
+        }
+        draw();
+    })();
 });
