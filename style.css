@@ -305,6 +305,11 @@ main {
   color: var(--text-color);
 }
 
+.theme-classic .filter-select option {
+  background: #ffffff;
+  color: #2c3e50;
+}
+
 .checkbox-container {
   text-align: center;
   margin: 1.5rem 0;
